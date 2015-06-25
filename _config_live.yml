@@ -3,12 +3,12 @@
 
 
 # Setup
-isLive:                 false # true = live :: false = dev
+isLive:                 true # true = live :: false = dev
 version:                1.0.0
 title:                  Rahul Thakur
 tagline:                MusicBuff, Gamer, Coder
 description:            Personal website of Rahul Thakur
-url:                    http://r.dev # base hostname & protocol
+url:                    http://rahulthakur.me # base hostname & protocol
 baseurl:                "" # for sub-directories eg. /blog/
 timezone:               Asia/Hong_Kong
 keywords:               rahul thakur, rahulthakur, rahul, thakur, rkt, dd, catastrophe corporation, catastrophe corp, catcorp, cc, developer, programmer, coder, designer, java, android, php, musicbuff, gamer
@@ -39,10 +39,10 @@ nav:
 
 
 # Analytics and Comments
-# google_analytics:       UA-62417983-3
-# google_verification:    lH_YbKTfJUHwERczHyXd2AKj_2LlFwiZx6bUCqsrSd8
-# bing_verification:      03805AEA078E6A84C402D95910C0D212
-# disqus_shortname:       rahulrkt
+google_analytics:       UA-62417983-3
+google_verification:    lH_YbKTfJUHwERczHyXd2AKj_2LlFwiZx6bUCqsrSd8
+bing_verification:      03805AEA078E6A84C402D95910C0D212
+disqus_shortname:       rahulrkt
 
 
 # Post Directives
