@@ -1,0 +1,41 @@
+!="---\n"
+!="layout: master\n"
+!="---\n\n"
+
+
+doctype html
+html(
+	xmlns="http://www.w3.org/1999/xhtml"
+	xml:lang="en"
+	lang="en"
+	itemscope
+	itemtype="http://schema.org/Person"
+)
+
+	!="{% include head.html %}"
+
+	body
+		<!--[if lt IE 9]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+
+		div.container.content
+			div.masthead
+				h3.masthead-title
+					a(href="/", title="Home")
+						!="{{ site.title }}"
+					!="{% for map in site.nav %}"
+						!="&nbsp;&nbsp;&nbsp;"
+						small
+							a(href!="{{ map[1] }}")
+								!=".{{ map[0] }}"
+					!="{% endfor %}"
+
+			!="{{ content }}"
+
+			!="{% include scripts.html %}"
+
+			div.footer
+				p &copy;
+					!="{{ site.time | date: '%Y' }}"
+					a(href!="mailto:{{ site.author.email }}") R

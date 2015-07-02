@@ -16,9 +16,10 @@ post: tmux set-window-option -g automatic-rename on
 windows:
   - worker: bundle install; atom .; clear
   - watcher:
-      layout: f2f8,127x43,0,0[127x18,0,0{63x18,0,0,0,63x18,64,0,5},127x14,0,19,4,127x9,0,34,1]
+      layout: 93aa,127x43,0,0[127x33,0,0{63x33,0,0[63x16,0,0,0,63x16,0,17,6],63x33,64,0[63x16,64,0,3,63x16,64,17,5]},127x9,0,34,1]
       panes:
         - jekyll: jekyll build -w
+        - jade: cd _includes/jade; jade -w -o ../ *.jade
         - guard: guard
         - jade: cd _layouts/jade; jade -w -o ../ *.jade
         - htop: htop

@@ -8,10 +8,11 @@ version:                1.0.0
 title:                  Rahul Thakur
 tagline:                MusicBuff, Gamer, Coder
 description:            Personal website of Rahul Thakur
-url:                    http://r.dev # base hostname & protocol
-baseurl:                "" # for sub-directories eg. /blog/
+url:                    http://r.dev
+ip:                     192.168.2.4 # for local dev with live-reload
+locale:                 en_IN
 timezone:               Asia/Hong_Kong
-keywords:               rahul thakur, rahulthakur, rahul, thakur, rkt, dd, catastrophe corporation, catastrophe corp, catcorp, cc, developer, programmer, coder, designer, java, android, php, musicbuff, gamer
+logo:                   /assets/img/logo.png
 
 
 # Author Details
@@ -28,6 +29,7 @@ author:
   stackoverflow:        1127443 # https://stackoverflow.com/users/{{ site.author.stackoverflow }}
   googleplus:           +RahulThakurRKT # https://plus.google.com/{{ site.author.googleplus }}
   cv:                   /assets/pdf/CV.pages.pdf
+  keywords:             [ rahul thakur, rahulthakur, rahul, thakur, rkt, dd, catastrophe corporation, catastrophe corp, catcorp, cc, developer, programmer, coder, designer, java, android, php, musicbuff, gamer ]
 
 
 # Navigation
@@ -39,10 +41,10 @@ nav:
 
 
 # Analytics and Comments
-# google_analytics:       UA-62417983-3
-# google_verification:    lH_YbKTfJUHwERczHyXd2AKj_2LlFwiZx6bUCqsrSd8
-# bing_verification:      03805AEA078E6A84C402D95910C0D212
-# disqus_shortname:       rahulrkt
+google_analytics:       UA-62417983-3
+google_verification:    lH_YbKTfJUHwERczHyXd2AKj_2LlFwiZx6bUCqsrSd8
+bing_verification:      03805AEA078E6A84C402D95910C0D212
+disqus_shortname:       rahulrkt
 
 
 # Post Directives

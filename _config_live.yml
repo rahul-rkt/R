@@ -8,10 +8,11 @@ version:                1.0.0
 title:                  Rahul Thakur
 tagline:                MusicBuff, Gamer, Coder
 description:            Personal website of Rahul Thakur
-url:                    http://rahulthakur.me # base hostname & protocol
-baseurl:                "" # for sub-directories eg. /blog/
+url:                    http://rahulthakur.me
+locale:                 en_IN
 timezone:               Asia/Hong_Kong
-keywords:               rahul thakur, rahulthakur, rahul, thakur, rkt, dd, catastrophe corporation, catastrophe corp, catcorp, cc, developer, programmer, coder, designer, java, android, php, musicbuff, gamer
+logo:                   /assets/img/logo.png
+
 
 
 # Author Details
@@ -28,6 +29,7 @@ author:
   stackoverflow:        1127443 # https://stackoverflow.com/users/{{ site.author.stackoverflow }}
   googleplus:           +RahulThakurRKT # https://plus.google.com/{{ site.author.googleplus }}
   cv:                   /assets/pdf/CV.pages.pdf
+  keywords:             rahul thakur, rahulthakur, rahul, thakur, rkt, dd, catastrophe corporation, catastrophe corp, catcorp, cc, developer, programmer, coder, designer, java, android, php, musicbuff, gamer
 
 
 # Navigation
@@ -80,4 +82,4 @@ sass:
   sass_dir:             _sass
   style:                compressed
 
-exclude:                [ "vendor", "toolbelt", "public", "Gemfile", "Gemfile.lock", "config.ru", "Guardfile", ".travis.yml", "README.md", "LICENSE" ]
+exclude:                [ "css", "vendor", "toolbelt", "public", "Gemfile", "Gemfile.lock", "config.ru", "Guardfile", ".travis.yml", "README.md", "LICENSE" ]
