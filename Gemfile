@@ -1,11 +1,12 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'github-pages'
-gem 'bourbon'
-gem 'neat'
-gem 'guard'
-gem 'guard-livereload'
-gem 'rack'
-gem 'rack-rewrite'
-gem 'html-proofer'
-gem 'tmuxinator'
+gem "github-pages"
+gem "bourbon"
+gem "neat"
+gem "bitters"
+gem "guard"
+gem "guard-livereload"
+gem "rack"
+gem "rack-rewrite"
+gem "html-proofer"
+gem "tmuxinator"
