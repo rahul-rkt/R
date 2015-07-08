@@ -5,6 +5,10 @@
 @import "vendor/master"
 
 
+// image resources ------------------------------------------------------------
+$logo:                   "/assets/img/logo.png"
+
+
 // colour palette -------------------------------------------------------------
 $color-white:            #C0C5CE
 $color-white-bright:     #EFF1F5
@@ -23,7 +27,8 @@ $color-blue:             #8FA1B3
 $color-blue-bright:      #E0EFF1
 
 $color-yellow:           #EBCB8B
-$color-yellow-bright:    #F5D9A2
+$color-yellow-bright:    #FAFBD5
+// F5D9A2
 
 $color-magenta:          #755E6F
 $color-magenta-bright:   #B48EAD
@@ -33,59 +38,28 @@ $color-cyan-bright:      #DAF2EC
 
 
 // typography -----------------------------------------------------------------
-$font-stack-base:        $helvetica
-$font-size-base:         20px
+$font-stack-base:        "Lato", "Gibson", $helvetica
+$font-size-base:         16px
 $font-stack-code:        "Andale Mono", Menlo, $monospace
-$font-size-code:         16px
+$font-size-code:         14px
 $line-height-base:       1.5
-// $spacing-unit:           30px
+$spacing-unit:           30px
 
 
 $large-font-size:  $font-size-base * 1.25
 $small-font-size:  $font-size-base * 0.85
+$padding-base:           25px
+$margin-base:            80px
+$logo-dimension:         60px
+$line-dimension:         90px
 
 
 // media-query ----------------------------------------------------------------
 $display-threshold:      800px
-//$large-display:          800px
 
 
-$text-color:       #111
-$background-color: #fdfdfd
-$brand-color:      #2a7ae2
-
-$grey-color:       #828282
-$grey-color-light: lighten($grey-color, 40%)
-$grey-color-dark:  darken($grey-color, 25%)
-
-// Page Styles
-$body-color:       #515151
-$body-bg-color:    #fff
-
-// Links
-$link-color:       #268bd2
-
-
-// Using media queries with like this:
-// @include media-query($on-palm)
-//     .wrapper
-//         padding-right: $spacing-unit / 2
-//         padding-left: $spacing-unit / 2
-//
-//
-@mixin media-query($device)
-    @media screen and (max-width: $device)
-        @content
-
-@mixin font($size)
-    font-size: 0px + $size
-    font-size: 0rem + $size / $font-size-base
-    line-height: 0 + round($font-size-base / $size*10000) / 10000
-
-@mixin rounded($radius:4px)
-    -webkit-border-radius : $radius
-    -moz-border-radius : $radius
-    border-radius : $radius
+// number of nav items --------------------------------------------------------
+$total-nav-items:        4
 
 
 // R --------------------------------------------------------------------------

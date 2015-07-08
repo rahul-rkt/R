@@ -14,12 +14,16 @@ html(
 
     !="{% include head.html %}"
 
-    body
+    body.body
+
+
         <!--[if lt IE 9]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+
         input#toggle(type="checkbox")
+
 
         nav.nav
             label.toggle-controller(for="toggle") ☰
@@ -29,15 +33,33 @@ html(
                     !="{% for map in site.nav %}"
                         li.nav-item
                             a(href!="{{ map[1] }}")
-                                !=".{{ map[0] }}"
+                                !="{{ map[0] }}"
                     !="{% endfor %}"
 
-        main.main
-            div.content
-                !="{{ content }}"
-                !="{% include scripts.html %}"
+        div.animator
+            div.animate
+                header.header
+                    div.branding
+                        div.line-before
+                        a(href!="{{ site.url }}")
+                            span.logo
+                        div.line-after
 
-        footer
-            p &copy;
-                !="{{ site.time | date: '%Y' }}"
-                a(href!="mailto:{{ site.author.email }}") R
+
+                main.main
+                    div.content
+                        !="{{ content }}"
+                        !="{% include scripts.html %}"
+
+
+                footer.footer
+                    div.feed
+                        div.line-before
+                        a(href!="/feed.xml")
+                            span.rss ♾
+                            //- ♾⚛∞
+                        div.line-after
+
+                    p.copyright &copy; &nbsp;
+                        !="{{ site.time | date: '%Y' }}"
+                        a(href!="mailto:{{ site.author.email }}") &nbsp; R

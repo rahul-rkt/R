@@ -1,0 +1,29 @@
+.header
+    position: relative
+    display: block
+
+    .branding
+        display: inline-block
+        vertical-align: middle
+        text-align: center
+        position: relative
+
+        .logo
+            +background-image(url(#{$logo}))
+            background-size: contain
+            position: absolute
+            display: block
+            +size($logo-dimension)
+            top: 0px
+            left: -($logo-dimension/2)
+            +filter(grayscale(100%))
+            +transition-on(filter)
+
+        .logo:hover
+            +filter(grayscale(0%))
+
+        .line-before
+            +make-line($line-dimension, $logo-dimension/2, $logo-dimension/2 + 10px, left)
+
+        .line-after
+            +make-line($line-dimension, $logo-dimension/2, $logo-dimension/2 + 10px, right)

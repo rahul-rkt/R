@@ -1,84 +1,60 @@
-body
-    background: $color-white
-
-.content
-    background: $color-white-bright
-
-// toggle checkbox killer -----------------------------------------------------
 #toggle
     display: none
 
-
-// nav defaults ---------------------------------------------------------------
-.nav
-    top: 0px
-    //background: $color-white
-    width: 100%
-    position: relative
-
-    +animation(drop-nav-bar 0.75s $ease-in-expo 1)
-
-+keyframes(drop-nav-bar)
-    from
-        +transform(translateY(-80px))
-    to
-        +transform(translateY(0))
-
-
-// toggle-controller label defaults -------------------------------------------
 .toggle-controller
-    text-align: right
-    position: relative
-    display: block
-    margin-bottom: 0px
-    cursor: pointer
+    display: none
+
+.nav-list
+    padding: $padding-base
+    top: 0px
     z-index: 1
-    padding: 25px
-    background: $color-white
+    position: absolute
+    display: block
+    width: 100%
 
+.animator
+    .animate
+        background: $color-white-bright
+        position: absolute
+        z-index: 2
+        top: $padding-base*2.5
+        +animation(drop-nav-bar 0.75s $ease-in-out-expo 1)
 
-// page content defaults ------------------------------------------------------
-.content
-    position: relative
-    z-index: 0
-    padding: 25px
-    top: -150px
+    +keyframes(drop-nav-bar)
+        from
+            +transform(translateY(-$padding-base*2.5))
+        to
+            +transform(translateY(0px))
 
 
 // viewport <= display-threshold ----------------------------------------------
 @include media(max-width $display-threshold)
-    .nav-list
-        z-index: -1
+    .toggle-controller
+        display: block
         position: relative
-        padding: 25px
-        .nav-items
-            display: block
+        color: $color-white
+        padding: $padding-base $padding-base 0 0
+        text-align: right
+        margin-bottom: 0px
+        cursor: pointer
+
+    .nav-list
+        top: $padding-base*1.25
 
     #toggle
         &:checked
-            + .nav
-                .nav-list
-                    display: block
+            ~ .animator
+                .animate
+                    +nav-animation($total-nav-items*24px + $padding-base*2.5)
 
-            ~ .main
-                .content
-                    top: 0px
+        &:not(:checked)
+            ~ .animator
+                .animate
+                    +nav-animation($padding-base*2.5)
 
 
 // viewport > display-threshold -----------------------------------------------
 @include media(min-width $display-threshold+1)
-    main
-        padding-top: 120px
-
-
-    .toggle-controller
-        display: none
-
-    nav
-        ul
-            margin: 0
-            padding: 0
-
-            li
-                display: inline-block
-                margin-right: 40px
+    .nav-item
+        display: inline-block
+        padding: 0 $padding-base

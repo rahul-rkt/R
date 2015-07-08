@@ -9,10 +9,9 @@ title:                  Rahul Thakur
 tagline:                MusicBuff, Gamer, Coder
 description:            Personal website of Rahul Thakur
 url:                    http://r.dev
-ip:                     192.168.2.5 # for local dev with live-reload
+ip:                     192.168.2.6 # for local dev with live-reload
 locale:                 en_IN
 timezone:               Asia/Hong_Kong
-logo:                   /assets/img/logo.png
 
 
 # Author Details
@@ -20,6 +19,7 @@ author:
   name:                 Rahul Thakur
   avatar_light:         /assets/img/me-light.png
   avatar_dark:          /assets/img/me-dark.png
+  logo:                 /assets/img/logo.png
   website:              http://rahulthakur.me
   email:                r@rahulthakur.me # mailto:{{ site.author.email }}
   twitter:              _rahulthakur # https://twitter.com/{{ site.author.twitter }}
