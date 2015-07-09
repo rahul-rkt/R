@@ -9,7 +9,7 @@ title:                  Rahul Thakur
 tagline:                MusicBuff, Gamer, Coder
 description:            Personal website of Rahul Thakur
 url:                    http://r.dev
-ip:                     192.168.2.6 # for local dev with live-reload
+ip:                     192.168.2.5 # for local dev with live-reload
 locale:                 en_IN
 timezone:               Asia/Hong_Kong
 
@@ -82,4 +82,4 @@ sass:
   sass_dir:             _sass
   style:                compressed
 
-exclude:                [ "vendor", "toolbelt", "public", "Gemfile", "Gemfile.lock", "config.ru", "Guardfile", ".travis.yml", "README.md", "LICENSE" ]
+exclude:                [ "vendor", "toolbelt", "public", "config.ru", "Gemfile", "Gemfile.lock", "Guardfile", ".travis.yml", "README.md", "LICENSE" ]

@@ -6,7 +6,6 @@ gem "neat"
 gem "bitters"
 gem "guard"
 gem "guard-livereload"
-gem "rack"
-gem "rack-rewrite"
+gem 'rack-jekyll', github: 'adaoraul/rack-jekyll'
 gem "html-proofer"
 gem "tmuxinator"

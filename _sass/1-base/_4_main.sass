@@ -1,0 +1,22 @@
+.animate
+    width: 100%
+
+
+.content
+    margin: $margin-base*1.5 0 $margin-base*0.5
+    +user-select(text)
+    +user-select-color
+    text-align: justify
+    width: 100%
+
+    // viewport << display-threshold ------------------------------------------
+    +max-screen($display-threshold*0.6)
+        +outer-container(90%)
+
+    // viewport < display-threshold -------------------------------------------
+    +screen($display-threshold*0.6+1, $display-threshold)
+        +outer-container(75%)
+
+    // viewport < display-threshold -------------------------------------------
+    +min-screen($display-threshold+1)
+        +outer-container(60%)

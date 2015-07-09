@@ -6,11 +6,15 @@
 
 .nav-list
     padding: $padding-base
-    top: 0px
+    top: 0em
     z-index: 1
     position: absolute
     display: block
     width: 100%
+    .nav-items
+        .nav-item
+            +link-color($color-black-bright)
+
 
 .animator
     .animate
@@ -24,18 +28,17 @@
         from
             +transform(translateY(-$padding-base*2.5))
         to
-            +transform(translateY(0px))
+            +transform(translateY(0em))
 
 
-// viewport <= display-threshold ----------------------------------------------
-@include media(max-width $display-threshold)
++max-screen($display-threshold)
     .toggle-controller
         display: block
         position: relative
         color: $color-white
         padding: $padding-base $padding-base 0 0
         text-align: right
-        margin-bottom: 0px
+        margin-bottom: 0em
         cursor: pointer
 
     .nav-list
@@ -45,7 +48,7 @@
         &:checked
             ~ .animator
                 .animate
-                    +nav-animation($total-nav-items*24px + $padding-base*2.5)
+                    +nav-animation($total-nav-items*1.5em + $padding-base*2.5)
 
         &:not(:checked)
             ~ .animator
@@ -53,8 +56,7 @@
                     +nav-animation($padding-base*2.5)
 
 
-// viewport > display-threshold -----------------------------------------------
-@include media(min-width $display-threshold+1)
++min-screen($display-threshold+1)
     .nav-item
         display: inline-block
         padding: 0 $padding-base

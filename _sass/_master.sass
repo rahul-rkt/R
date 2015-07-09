@@ -2,11 +2,12 @@
 
 
 // vendor ---------------------------------------------------------------------
-@import "vendor/master"
+@import "0-vendor/master"
 
 
 // image resources ------------------------------------------------------------
 $logo:                   "/assets/img/logo.png"
+$rss:                    "/assets/img/rss.png"
 
 
 // colour palette -------------------------------------------------------------
@@ -39,19 +40,18 @@ $color-cyan-bright:      #DAF2EC
 
 // typography -----------------------------------------------------------------
 $font-stack-base:        "Lato", "Gibson", $helvetica
-$font-size-base:         16px
+$font-size-base:         1em
 $font-stack-code:        "Andale Mono", Menlo, $monospace
-$font-size-code:         14px
+$font-size-code:         0.875em
+
+
+// dimensions -----------------------------------------------------------------
 $line-height-base:       1.5
-$spacing-unit:           30px
-
-
-$large-font-size:  $font-size-base * 1.25
-$small-font-size:  $font-size-base * 0.85
-$padding-base:           25px
-$margin-base:            80px
-$logo-dimension:         60px
-$line-dimension:         90px
+$spacing-unit:           1.875em
+$padding-base:           1.5em
+$margin-base:            5em
+$logo-dimension:         4em
+$line-dimension:         5.75em
 
 
 // media-query ----------------------------------------------------------------
@@ -63,4 +63,5 @@ $total-nav-items:        4
 
 
 // R --------------------------------------------------------------------------
-@import "base/master"
+@import "1-base/master"
+@import "2-page/master"

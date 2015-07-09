@@ -15,8 +15,6 @@ html(
     !="{% include head.html %}"
 
     body.body
-
-
         <!--[if lt IE 9]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -40,10 +38,10 @@ html(
             div.animate
                 header.header
                     div.branding
-                        div.line-before
+                        //- div.line-before
                         a(href!="{{ site.url }}")
                             span.logo
-                        div.line-after
+                        //- div.line-after
 
 
                 main.main
@@ -54,12 +52,11 @@ html(
 
                 footer.footer
                     div.feed
-                        div.line-before
+                        //- div.line-before
                         a(href!="/feed.xml")
-                            span.rss ♾
-                            //- ♾⚛∞
-                        div.line-after
+                            span.rss
+                        //- div.line-after
 
                     p.copyright &copy; &nbsp;
-                        !="{{ site.time | date: '%Y' }}"
-                        a(href!="mailto:{{ site.author.email }}") &nbsp; R
+                        !='{{ site.time | date: "%Y" }}'
+                        a(href!="/about") &nbsp; R

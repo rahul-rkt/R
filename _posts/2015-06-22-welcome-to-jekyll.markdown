@@ -2,16 +2,7 @@
 layout: post
 title:  "Welcome to Jekyll!"
 date:   2015-06-22 17:48:03
-categories: jekyll update
 ---
-<div id="js-parallax-window" class="parallax-window">
-  <div class="parallax-static-content">
-    <b>Parallax Window</b>
-  </div>
-  <div id="js-parallax-background" class="parallax-background"></div>
-</div>
-
-# Hello, World?
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
