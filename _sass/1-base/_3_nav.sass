@@ -17,18 +17,18 @@
 
 
 .animator
-    .animate
-        background: $color-white-bright
-        position: absolute
-        z-index: 2
-        top: $padding-base*2.5
-        +animation(drop-nav-bar 0.75s $ease-in-out-expo 1)
+    // .animate
+    background: $color-white-bright
+    position: absolute
+    z-index: 2
+    top: $padding-base*2.5
+    +animation(drop-nav-bar 0.75s $ease-in-out-expo 1)
 
-    +keyframes(drop-nav-bar)
-        from
-            +transform(translateY(-$padding-base*2.5))
-        to
-            +transform(translateY(0em))
++keyframes(drop-nav-bar)
+    from
+        +transform(translateY(-$padding-base*2.5))
+    to
+        +transform(translateY(0em))
 
 
 +max-screen($display-threshold)
@@ -47,13 +47,13 @@
     #toggle
         &:checked
             ~ .animator
-                .animate
-                    +nav-animation($total-nav-items*1.5em + $padding-base*2.5)
+                // .animate
+                +nav-animation($total-nav-items*1.5em + $padding-base*2.5)
 
         &:not(:checked)
             ~ .animator
-                .animate
-                    +nav-animation($padding-base*2.5)
+                // .animate
+                +nav-animation($padding-base*2.5)
 
 
 +min-screen($display-threshold+1)

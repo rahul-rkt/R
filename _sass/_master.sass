@@ -1,13 +1,8 @@
 @charset "utf-8"
 
 
-// vendor ---------------------------------------------------------------------
-@import "0-vendor/master"
-
-
-// image resources ------------------------------------------------------------
-$logo:                   "/assets/img/logo.png"
-$rss:                    "/assets/img/rss.png"
+// dependencies ---------------------------------------------------------------
+@import "0-vendor/bourbon/addons/font-stacks"
 
 
 // colour palette -------------------------------------------------------------
@@ -18,24 +13,22 @@ $color-black:            #2B303B
 $color-black-bright:     #65737E
 
 $color-red:              #BF616A
-$color-red-bright:       #D08770
+$color-red-bright:       #F99157
 
 $color-green:            #A3BE8C
-$color-green-bright:     #EFFAB4
-// D1F2A5
+$color-green-bright:     #9C9
 
 $color-blue:             #8FA1B3
-$color-blue-bright:      #E0EFF1
+$color-blue-bright:      #69C
 
-$color-yellow:           #EBCB8B
-$color-yellow-bright:    #FAFBD5
-// F5D9A2
+$color-yellow:           #FC6
+$color-yellow-bright:    #EBCB8B
 
-$color-magenta:          #755E6F
-$color-magenta-bright:   #B48EAD
+$color-magenta:          #B48EAD
+$color-magenta-bright:   #C9C
 
 $color-cyan:             #96B5B4
-$color-cyan-bright:      #DAF2EC
+$color-cyan-bright:      #6DDCE4
 
 
 // typography -----------------------------------------------------------------
@@ -48,18 +41,77 @@ $font-size-code:         0.875em
 // dimensions -----------------------------------------------------------------
 $line-height-base:       1.5
 $spacing-unit:           1.875em
+
 $padding-base:           1.5em
+$padding-medium:         $padding-base/2
+$padding-small:          $padding-base/4
+
+
 $margin-base:            5em
+$margin-small:           $margin-base/10
+$margin-inner:           $margin-base/5
+$margin-element:         $margin-base/4
+
+$border-size:            0.1em
+
 $logo-dimension:         4em
 $line-dimension:         5.75em
+
+
+// image resources ------------------------------------------------------------
+$logo:                   "/assets/img/logo.png"
+$rss:                    "/assets/img/rss.png"
 
 
 // media-query ----------------------------------------------------------------
 $display-threshold:      800px
 
 
-// number of nav items --------------------------------------------------------
+// nav items ------------------------------------------------------------------
 $total-nav-items:        4
+
+
+// set vendor variables -------------------------------------------------------
+// Typography
+$base-font-family: $font-stack-base
+$heading-font-family: $base-font-family
+
+// Font Sizes
+$base-font-size: $font-size-base
+
+// Line height
+$base-line-height: $line-height-base
+$heading-line-height: $base-line-height*0.8
+
+// Other Sizes
+$base-border-radius: 0.2em
+$base-spacing: $base-line-height*1em
+$small-spacing: $base-spacing/2
+$base-z-index: 0
+
+// Colors
+$blue: $color-red
+// #477dca
+$dark-gray: $color-black-bright
+$medium-gray: $color-blue
+$light-gray: $color-white
+
+// Font Colors
+$base-background-color: $color-white-bright
+$base-font-color: $color-black
+$action-color: $blue
+
+// Border
+$base-border-color: $light-gray
+$base-border: 0.01em solid $base-border-color
+
+// Forms
+$form-box-shadow: inset 0 0.1em 0.2em rgba($color-black-bright, 0.06)
+$form-box-shadow-focus: $form-box-shadow, 0 0 0.4em adjust-color($action-color, $lightness: -5%, $alpha: -0.3)
+
+
+// vendor ---------------------------------------------------------------------
+@import "0-vendor/master"
 
 
 // R --------------------------------------------------------------------------

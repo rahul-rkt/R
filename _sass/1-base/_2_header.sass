@@ -3,18 +3,12 @@
     display: block
 
     .branding
-        display: inline-block
-        vertical-align: middle
-        text-align: center
-        position: relative
-
         .logo
             +background-image(url(#{$logo}))
             background-size: contain
             position: absolute
             display: block
             +size($logo-dimension)
-            top: 0em
             +filter(grayscale(100%))
             +transition-on(filter -webkit-filter)
             +line-around($logo-dimension/2)

@@ -1,24 +1,26 @@
 =line-under($color: $color-white)
     &:after
-        content: ""
+        content: " "
         display: block
         border-bottom: 0.02em solid $color
         margin-top: 0.1em
 
 
-// =line-around($width, $top, $shift, $position, $color: $color-white)
 =line-around($top, $color: $color-white)
     display: inline-block
     position: relative
+
     &:before, &:after
-        content: ""
+        content: " "
         position: absolute
         top: $top
         width: $line-dimension
         border-bottom: 0.05em solid $color
+
     &:before
         right: 100%
         margin-right: 0.625em
+
     &:after
         left: 100%
         margin-left: 0.625em
@@ -52,3 +54,10 @@
 
         &:hover, &:focus, &:active
             color: $active
+
+
+=border-radius($radius)
+    +border-top-radius($radius)
+    +border-right-radius($radius)
+    +border-bottom-radius($radius)
+    +border-left-radius($radius)

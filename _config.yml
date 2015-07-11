@@ -9,7 +9,7 @@ title:                  Rahul Thakur
 tagline:                MusicBuff, Gamer, Coder
 description:            Personal website of Rahul Thakur
 url:                    http://r.dev
-ip:                     192.168.2.5 # for local dev with live-reload
+ip:                     192.168.2.6 # for local dev with live-reload
 locale:                 en_IN
 timezone:               Asia/Hong_Kong
 
@@ -50,6 +50,7 @@ disqus_shortname:       rahulrkt
 # Post Directives
 future:                 true
 permalink:              /:categories/:title/
+relative_permalinks:    true
 paginate:               1
 
 
@@ -58,21 +59,30 @@ markdown:               kramdown
 highlighter:            pygments
 
 kramdown:
+  input:                GFM
   auto_ids:             true
   footnote_nr:          1
   entity_output:        as_char
   toc_levels:           1..6
-  use_coderay:          true
-
-  coderay:
-    coderay_line_numbers:           nil
-    coderay_line_numbers_start:     1
-    coderay_tab_width:              4
-    coderay_bold_every:             10
-    coderay_css:                    class
+  smart_quotes:         [ "apos", "apos", "quot", "quot" ]
+  parse_block_html:     true
+  hard_wrap:            false
+  # syntax_highlighter:   pygments
+  enable_coderay:       true
+  coderay_line_numbers:           nil
+  coderay_line_numbers_start:     1
+  coderay_tab_width:              4
+  coderay_bold_every:             5
+  # coderay_css:                    class
+  extensions:
+    - autolink
+    - footnotes
+    - smart
 
 
 # Build Directives
+safe:                   true
+lsi:                    false
 gems:
   - jekyll-sitemap
   - bourbon

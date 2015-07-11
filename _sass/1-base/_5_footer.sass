@@ -4,18 +4,12 @@
 
 
     .feed
-        display: inline-block
-        vertical-align: middle
-        text-align: center
-        position: relative
-
         .rss
             +background-image(url(#{$rss}))
             background-size: contain
             position: absolute
             display: block
             +size($logo-dimension/2)
-            top: 0em
             +filter(grayscale(100%))
             +transition-on(filter -webkit-filter)
             +line-around($logo-dimension/4)

@@ -35,28 +35,24 @@ html(
                     !="{% endfor %}"
 
         div.animator
-            div.animate
-                header.header
-                    div.branding
-                        //- div.line-before
-                        a(href!="{{ site.url }}")
-                            span.logo
-                        //- div.line-after
+            //- div.animate
+            header.header
+                div.branding
+                    a(href!="{{ site.url }}")
+                        span.logo
 
 
-                main.main
-                    div.content
-                        !="{{ content }}"
-                        !="{% include scripts.html %}"
+            main.main
+                div.content
+                    !="{{ content }}"
+                    !="{% include scripts.html %}"
 
 
-                footer.footer
-                    div.feed
-                        //- div.line-before
-                        a(href!="/feed.xml")
-                            span.rss
-                        //- div.line-after
+            footer.footer
+                div.feed
+                    a(href!="/feed.xml")
+                        span.rss
 
-                    p.copyright &copy; &nbsp;
-                        !='{{ site.time | date: "%Y" }}'
-                        a(href!="/about") &nbsp; R
+                p.copyright &copy; &nbsp;
+                    !='{{ site.time | date: "%Y" }}'
+                    a(href!="/about") &nbsp; R
