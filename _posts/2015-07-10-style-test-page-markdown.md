@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Style Test Page MARKDOWN
+maths: true
 ---
 
 
@@ -85,6 +86,19 @@ HTML and <abbr title="cascading stylesheets">CSS</abbr> are our tools. Mauris a 
 {: .table-verticle}
 
 # Code Snippets
+
+This >> $$ 1 + 1 = 2 $$ >> is an inline-mathjax code
+
+$$
+\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}
+$$
+
+$$ e = mc^2 $$
+
+^That was not!
+
+This >> `code span test` >> is an inline-code with one tick
+
 
 ```css
 #container {

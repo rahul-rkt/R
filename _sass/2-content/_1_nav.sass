@@ -1,23 +1,26 @@
 #toggle
     display: none
 
+
 .toggle-controller
     display: none
 
+
 .nav-list
-    padding: $padding-base
+    padding: $padding-base 0em
     top: 0em
     z-index: 1
     position: absolute
     display: block
     width: 100%
     .nav-items
+        padding: 0em
+        width: 100%
         .nav-item
             +link-color($color-black-bright)
 
 
-.animator
-    // .animate
+.animation-wrapper
     background: $color-white-bright
     position: absolute
     z-index: 2
@@ -36,7 +39,7 @@
         display: block
         position: relative
         color: $color-white
-        padding: $padding-base $padding-base 0 0
+        padding: $padding-base $padding-base 0em 0em
         text-align: right
         margin-bottom: 0em
         cursor: pointer
@@ -46,14 +49,14 @@
 
     #toggle
         &:checked
-            ~ .animator
-                // .animate
-                +nav-animation($total-nav-items*1.5em + $padding-base*2.5)
+            ~ .animation-wrapper
+                top: $total-nav-items*1.5em + $padding-base*2.5
+                +transition-on($property: top, $func: $ease-in-out-expo)
 
         &:not(:checked)
-            ~ .animator
-                // .animate
-                +nav-animation($padding-base*2.5)
+            ~ .animation-wrapper
+                top: $padding-base*2.5
+                +transition-on($property: top, $func: $ease-in-out-expo)
 
 
 +min-screen($display-threshold+1)

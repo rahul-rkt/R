@@ -1,11 +1,67 @@
 @import "coderay"
+// mathjax --------------------------------------------------------------------
+.MathJax
+    color: $color-black-bright
+    margin: 0em $margin-small !important
+
+
+// inline code ----------------------------------------------------------------
+p
+    code
+        +code-box
+        color: $color-cyan
+        font-size: $font-size-code*0.875
+        padding: $padding-small*0.75
+        vertical-align: $padding-small*0.1667
+        margin: 0em $margin-small
+
+
+// gist -----------------------------------------------------------------------
+.gist
+    .gist-file
+        font-family: $font-stack-code !important
+        border: none !important
+        margin: 0em !important
+    .gist-data, .gist-syntax
+        background: $color-white-bright !important
+        border: none !important
+        padding: none !important
+    .file-data
+        font-size: $font-size-code !important
+        line-height: $line-height-base !important
+    .lines, .highlight
+        table-layout: auto !important
+        font-family: $font-stack-code !important
+        font-size: $font-size-code*0.875 !important
+        line-height: $line-height-base !important
+        background: $color-white !important
+        color: $color-black-bright !important
+    .line-numbers
+        text-align: left !important
+        background: $color-white !important
+        color: $color-blue !important
+    .gist-meta
+        display: none
+    .gist-data, .gist-syntax
+        // +border-code-box
+        table td
+            border: none
+//
+//         // font-family: $font-stack-code !important
+//         // font-size: $font-size-code !important
+//     .line-data
+//         // background: $color-white
+//         // padding: none
+//         pre
+//             color: $color-black
+// .gist .line-numbers
+//     padding: none !important
+
 
 // pygments code block --------------------------------------------------------
 .highlight
     pre
-        background: $color-black
-        color: $color-white
-        padding: $padding-medium
+        +code-box
 
         // line numbers
         .lineno
@@ -90,8 +146,8 @@
             color: $color-white
 
 //
-// div.highlight pre { background: #2b303b; color: #eff1f5; padding: $padding-medium; }
-// .c { color: #65737e; font-style: italic; } /* Comment */
+// div.highlight pre { background: #2b303b color: #eff1f5 padding: $padding-medium }
+// .c { color: #65737e font-style: italic } /* Comment */
 // .err { color: #bf616a } /* Error */
 // .k { color: #b48ead } /* Keyword */
 // .l { color: #d08770 } /* Literal */
@@ -104,11 +160,11 @@
 // .cs { color: #65737e } /* Comment.Special */
 // .gd { color: #bf616a } /* Generic.Deleted */
 // .ge { font-style: italic } /* Generic.Emph */
-// .gh { color: #eff1f5; font-weight: bold } /* Generic.Heading */
+// .gh { color: #eff1f5 font-weight: bold } /* Generic.Heading */
 // .gi { color: #a3be8c } /* Generic.Inserted */
-// .gp { color: #65737e; font-weight: bold } /* Generic.Prompt */
+// .gp { color: #65737e font-weight: bold } /* Generic.Prompt */
 // .gs { font-weight: bold } /* Generic.Strong */
-// .gu { color: #96b5b4; font-weight: bold } /* Generic.Subheading */
+// .gu { color: #96b5b4 font-weight: bold } /* Generic.Subheading */
 // .kc { color: #b48ead } /* Keyword.Constant */
 // .kd { color: #b48ead } /* Keyword.Declaration */
 // .kn { color: #96b5b4 } /* Keyword.Namespace */

@@ -1,8 +1,8 @@
 @charset "utf-8"
 
 
-// dependencies ---------------------------------------------------------------
-@import "0-vendor/bourbon/addons/font-stacks"
+// vendor ---------------------------------------------------------------------
+@import "0-vendor/master"
 
 
 // colour palette -------------------------------------------------------------
@@ -31,89 +31,96 @@ $color-cyan:             #96B5B4
 $color-cyan-bright:      #6DDCE4
 
 
-// typography -----------------------------------------------------------------
+// style directives -----------------------------------------------------------
+// base dimensions
+$em-base:                1rem
+$px:                     $em-base/16
+$modular-scale-ratio:    $major-third
+
+// typography
 $font-stack-base:        "Lato", "Gibson", $helvetica
-$font-size-base:         1em
-$font-stack-code:        "Andale Mono", Menlo, $monospace
-$font-size-code:         0.875em
-
-
-// dimensions -----------------------------------------------------------------
+$font-size-base:         $em-base
 $line-height-base:       1.5
-$spacing-unit:           1.875em
 
-$padding-base:           1.5em
-$padding-medium:         $padding-base/2
-$padding-small:          $padding-base/4
+$font-stack-code:        "Andale Mono", Menlo, $monospace
+$font-size-code:         $font-size-base*0.875
+$line-height-code:       $line-height-base*0.8
 
+// paddings
+$padding-base:           $em-base/4
+$padding-medium:         modular-scale(2, $padding-base)
+$padding-large:          modular-scale(4, $padding-base)
 
-$margin-base:            5em
-$margin-small:           $margin-base/10
-$margin-inner:           $margin-base/5
-$margin-element:         $margin-base/4
+// margins
+$margin-base:            $em-base/4
+$margin-medium:          modular-scale(4, $margin-base)
+$margin-large:           modular-scale(8, $margin-base)
 
-$border-size:            0.1em
+// borders & lines
+$border-size:            $px
+$border-radius:          $em-base/4
+$border-style-base:      solid
+$border-style-alt:       dashed
+$line-dimension:         modular-scale(5)
 
-$logo-dimension:         4em
-$line-dimension:         5.75em
+// time
+$time-duration-short:    0.25s
+$time-duration-long:     0.75s
+$timing-func-base:       $ease-out-quad
+$timing-func-alt:        $ease-in-out-expo
 
+// media-query
+$display-threshold:      $em-base*50
 
-// image resources ------------------------------------------------------------
-$logo:                   "/assets/img/logo.png"
-$rss:                    "/assets/img/rss.png"
+// assets
+$logo-dimension:         modular-scale(3)
+$logo-src:               "/assets/img/logo.png"
+$rss-src:                "/assets/img/rss.png"
 
-
-// media-query ----------------------------------------------------------------
-$display-threshold:      800px
-
-
-// nav items ------------------------------------------------------------------
+// nav items
 $total-nav-items:        4
 
 
 // set vendor variables -------------------------------------------------------
-// Typography
-$base-font-family: $font-stack-base
-$heading-font-family: $base-font-family
-
-// Font Sizes
-$base-font-size: $font-size-base
-
-// Line height
-$base-line-height: $line-height-base
-$heading-line-height: $base-line-height*0.8
-
-// Other Sizes
-$base-border-radius: 0.2em
-$base-spacing: $base-line-height*1em
-$small-spacing: $base-spacing/2
-$base-z-index: 0
-
-// Colors
-$blue: $color-red
-// #477dca
-$dark-gray: $color-black-bright
-$medium-gray: $color-blue
-$light-gray: $color-white
-
-// Font Colors
-$base-background-color: $color-white-bright
-$base-font-color: $color-black
-$action-color: $blue
-
-// Border
-$base-border-color: $light-gray
-$base-border: 0.01em solid $base-border-color
-
-// Forms
-$form-box-shadow: inset 0 0.1em 0.2em rgba($color-black-bright, 0.06)
-$form-box-shadow-focus: $form-box-shadow, 0 0 0.4em adjust-color($action-color, $lightness: -5%, $alpha: -0.3)
-
-
-// vendor ---------------------------------------------------------------------
-@import "0-vendor/master"
+// // Typography
+// $base-font-family:       $font-stack-base
+// $heading-font-family:    $font-stack-base
+//
+// // Font Sizes
+// $base-font-size:         $font-size-base
+//
+// // Line height
+// $base-line-height:       $line-height-base
+// $heading-line-height:    $line-height-base
+//
+// // Other Sizes
+// $base-border-radius:     $em-base/4
+// $base-spacing:           $line-height-base*1em
+// $small-spacing:          $base-spacing/2
+// $base-z-index:           0
+//
+// // Colors
+// $blue:                   #477DCA
+// $dark-gray:              $color-black-bright
+// $medium-gray:            $color-blue
+// $light-gray:             $color-white
+//
+// // Font Colors
+// $base-background-color:  $color-white-bright
+// $base-font-color:        $color-black
+// $action-color:           $blue
+//
+// // Border
+// $base-border-color:      $light-gray
+// $base-border:            0.01em solid $base-border-color
+//
+// // Forms
+// $form-box-shadow:        inset 0 0.1em 0.2em rgba($color-black-bright, 0.06)
+// $form-box-shadow-focus:  $form-box-shadow, 0 0 0.4em adjust-color($action-color, $lightness: -5%, $alpha: -0.3)
+//
 
 
 // R --------------------------------------------------------------------------
 @import "1-base/master"
-@import "2-page/master"
+@import "2-content/master"
+@import "3-page/master"

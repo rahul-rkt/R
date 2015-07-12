@@ -1,5 +1,5 @@
 head
-    //- General ---------------------------------------------------------------
+    //- general ---------------------------------------------------------------
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="language", content="English")
@@ -17,16 +17,16 @@ head
     )
 
 
-    //- SEO Optimizations -----------------------------------------------------
+    //- seo optimizations -----------------------------------------------------
     !="{% if site.isLive %}"
-        //- only include if site is live ______________________________________
         meta(name="robots", content="index, follow")
         meta(name="revisit-after", content="1 day")
         meta(
             name="keywords"
             content!="{% for keyword in site.author.keywords %}{{ keyword }}, {% endfor %}{{ site.author.name }}"
         )
-        //- Google
+
+        //- google
         meta(
             name="google-site-verification"
             content!="{{ site.google_verification }}"
@@ -50,7 +50,8 @@ head
         meta(name="google", content="notranslate")
         meta(name="google", content="nositelinkssearchbox")
         meta(name="googlebot", content="noodp")
-        //- Twitter Cards
+
+        //- twitter cards
         meta(name="twitter:card", content="summary")
         meta(
             name="twitter:title"
@@ -72,7 +73,8 @@ head
             name="twitter:image"
             content!="{{ site.logo }}"
         )
-        //- Open Graph
+
+        //- open graph
         meta(property="og:locale", content="en_IN")
         meta(property="og:locale:alternate", content="en_GB")
         meta(property="og:locale:alternate", content="en_US")
@@ -99,36 +101,36 @@ head
             property="og:image"
             content!="{{ site.logo }}"
         )
-        //- Bing
+
+        //- bing
         meta(
             name="msvalidate.01"
             content!="{{ site.bing_verification }}"
         )
-        //- ___________________________________________________________________
     !="{% endif %}"
 
 
-    //- Enable responsiveness on mobile devices -------------------------------
+    //- enable responsiveness on mobile devices -------------------------------
     meta(name="HandheldFriendly", content="True")
     meta(name="MobileOptimized", content="320")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
 
-    //- Title -----------------------------------------------------------------
+    //- title -----------------------------------------------------------------
     title!="{% if page.title == Home %}{{ site.title }} &middot; {{ site.tagline }}{% else %}{{ page.title }} &middot; {{ site.title }}{% endif %}"
 
 
-    //- CSS -------------------------------------------------------------------
-    //- Font-Awesome
+    //- css -------------------------------------------------------------------
+    //- font-awesome
     !="{% if page.fa %}"
         link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
     !="{% endif %}"
-    //- Inline all scss
+    //- inline all scss
     style(type="text/css")
         !="{% capture include_to_scssify %}{% include style.scss %}{% endcapture %}{{ include_to_scssify | scssify }}"
 
 
-    //- Icons -----------------------------------------------------------------
+    //- icons -----------------------------------------------------------------
     link(rel="apple-touch-icon", sizes="57x57", href="/assets/img/favicons/apple-touch-icon-57x57.png")
     link(rel="apple-touch-icon", sizes="60x60", href="/assets/img/favicons/apple-touch-icon-60x60.png")
     link(rel="apple-touch-icon", sizes="72x72", href="/assets/img/favicons/apple-touch-icon-72x72.png")
@@ -153,7 +155,7 @@ head
     meta(name="theme-color", content="#eff1f5")
 
 
-    //- RSS -------------------------------------------------------------------
+    //- rss -------------------------------------------------------------------
     !="{% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}"
     link(
         rel="canonical"
