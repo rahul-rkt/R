@@ -1,141 +1,321 @@
+// html & body ----------------------------------------------------------------
 html
-    overflow-x: hidden
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
 
+*, *:before, *:after
+    -webkit-box-sizing: inherit
+    -moz-box-sizing: inherit
+    box-sizing: inherit
 
 body
-    +font-feature-settings("kern", "liga", "pnum")
-    -webkit-font-smoothing: antialiased
-    color: $base-font-color
-    font-family: $base-font-family
-    font-size: $base-font-size
-    line-height: $base-line-height
-
-
     height: 100%
     max-height: 100%
     margin: 0em
     padding: 0em
     text-align: center
-    background-color: $color-white-bright
-    border-top-width: 0.25em
-    border-top-style: solid
-    border-color: $color-red
+    +font-feature-settings("kern", "liga", "pnum")
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
     text-rendering: optimizelegibility
+    font-family: $font-stack-base
+    font-size: $font-size-base
+    line-height: $line-height-base
+    color: $color-fg
+    background: $color-bg
+    border-top-width: $border-size*4
+    border-top-style: solid
+    border-color: $color-elements-special
     +user-select(none)
     overflow-x: hidden
 
-h1, h2, h3, h4, h5, h6
-    color: $color-black-bright
-    margin: 1em 0 0.25em 0
 
+// headers --------------------------------------------------------------------
+h1, h2, h3, h4, h5, h6
+    color: $color-fg-alt
+    margin: 0em 0em $margin-base*2
 
 h1
-    font-size: $font-size-base*2
+    font-size: modular-scale(6)
     +line-under
 
-
 h2
-    font-size: $font-size-base*1.75
-
+    font-size: modular-scale(5)
 
 h3
-    font-size: $font-size-base*1.6
-
+    font-size: modular-scale(4)
 
 h4
-    font-size: $font-size-base*1.45
-
+    font-size: modular-scale(3)
 
 h5
-    font-size: $font-size-base*1.3
-
+    font-size: modular-scale(2)
 
 h6
-    font-size: $font-size-base*1.15
+    font-size: modular-scale(1)
     font-style: italic
 
 
+// paragraphs -----------------------------------------------------------------
+p
+    margin: 0em 0em $margin-medium
+
+
+// links ----------------------------------------------------------------------
+a
+    color: $color-link
+    text-decoration: none
+    +transition-on(color)
+
+    &:active, &:focus, &:hover
+        color: darken($color-link, 15%)
+
+    &:active, &:focus
+        outline: none
+
+
+// hr -------------------------------------------------------------------------
+hr
+    border-bottom: $border-size solid $color-elements-alt
+    border-left: none
+    border-right: none
+    border-top: none
+    margin: $margin-medium 0em
+
+
+// images ---------------------------------------------------------------------
+img, picture
+    margin: $margin-medium 0em
+    max-width: 100%
+
+
+// blockqoutes ----------------------------------------------------------------
 blockquote
-    margin: 1em 0.5em
-    padding: 1em 0.5em
+    margin: 0em 0em $margin-medium
 
     &:before
-        color: $color-blue
+        color: $color-elements
         content: "\2023\2023\2023"
-        font-size: 2em
-        line-height: 0.1em
-        margin-right: 0.25em
+        font-size: $font-size-base*2
+        margin-right: $margin-base
         vertical-align: -0.2em
 
     p
         display: inline
+        font-style: italic
 
+
+// lists ----------------------------------------------------------------------
+ol, ul
+    list-style-type: none
+    margin: 0em 0em $margin-medium 0em
+    padding: 0em
+
+    .default
+        margin-bottom: $margin-medium
+        padding-left: $padding-base
 
 ol
+    .default
+        list-style-type: lower-roman
+
     counter-reset: li
 
     li
         list-style: none
-        margin: 0em 0em 0.375em 1.75em
-        padding: 0.2em 0.5em
+        margin: 0em 0em $margin-base 0em
 
         &:before
             content: counter(li)
             counter-increment: li
-            margin-right: 1em
-            font-size: 80%
-            background-color: $color-blue
-            color: lighten($color-white-bright, 50%)
+            margin: 0em $margin-base*3 0em $margin-base/2
+            padding: $padding-base $padding-base*2
+            font-size: $font-size-small
+            background-color: $color-elements
+            color: lighten($color-bg, 15%)
             font-weight: bold
-            padding: 0.2em 0.5em
-            +border-radius(0.2em)
+            vertical-align: $px
+            +border-radius
 
     ol, ul
-        margin-top: 0.4em
+        margin: $margin-medium/2 0em $margin-medium/2 $margin-medium
 
-        li:last-child
-            margin-bottom: 0.4em
+ul
+    li
+        font-style: italic
+        margin-bottom: $margin-base
+
+    .default
+        list-style-type: disc
 
 
+dl
+    margin: 0em 0em $margin-medium
+
+    dt
+        font-weight: bold
+        margin-bottom: $margin-base
+
+    dd
+        margin: 0em 0em $margin-base
+        font-style: italic
+
+        &:before
+            content: " "
+            color: $color-elements
+            border: $border-size solid $color-elements
+            border-color: $color-elements
+            margin: 0em $margin-base 0em 0em
+
+
+// tables ---------------------------------------------------------------------
 table
+    border-collapse: collapse
+    margin: 0em 0em $margin-medium
+    table-layout: fixed
+    width: 100%
+    text-align: left
+
+    tr, td, th
+        vertical-align: middle
+
+    tr.even
+        background: darken($color-bg, 2%)
+
     th
         font-weight: bold
-        font-size: 1.25em
-        color: $color-black-bright
-        padding: 1em
+        font-size: $font-size-large
+        color: $color-fg-alt
+        padding: rem($padding-medium)
+        border-bottom: $border-size solid $color-elements-alt
 
     td
-        padding: 0.5em 1.25em
+        padding: rem($padding-medium)
+        border-bottom: $border-size solid $color-elements-alt
+        left: -$font-size-base/4
 
     tfoot
-        background: $color-blue
+        background: $color-elements
+        color: lighten($color-bg, 15%)
         font-weight: bold
-        color: lighten($color-white-bright, 50%)
 
-.table-horizontal, .table-verticle
-    border: 0.05em solid $color-white
+.table-horizontal, .table-vertical
+    border: $border-size solid $color-elements-alt
+    text-align: center
 
     td
         border-bottom: none
 
 .table-horizontal
     th
-        border-bottom: 0.05em dashed $color-white
+        border-bottom: $border-size dashed $color-elements-alt
 
-.table-verticle
+.table-vertical
     th
-        border-right: 0.05em solid $color-white
+        border-right: $border-size solid $color-elements-alt
         border-bottom: none
 
     td
-        border-right: 0.05em dashed $color-white
+        border-right: $border-size dashed $color-elements-alt
 
 
+// forms ----------------------------------------------------------------------
+fieldset
+    background-color: $color-elements-alt
+    border: $border-size
+    border-radius: $border-radius
+    margin: 0em 0em $margin-medium
+    padding: $padding-large
+    outline: none
+
+input, label, select
+    display: block
+
+label
+    font-weight: bold
+    margin-bottom: $margin-base
+
+    &.required:after
+        content: "*"
+
+    abbr
+        display: none
+
+#{$all-text-inputs}, select[multiple=multiple], textarea
+    background: $color-bg
+    border: $border-size
+    border-radius: $border-radius
+    border-color: $color-elements-alt
+    box-shadow: inset 0em $px $px*3 rgba($color-elements-alt, 0.06)
+    margin-bottom: $margin-base
+    padding: $padding-base
+    width: 100%
+    +transition-on(border-color)
+
+    &:hover
+        border-color: darken($color-elements-alt, 15%)
+
+    &:focus
+        border-color: $color-elements-special
+        box-shadow: inset 0em $px $px*3 rgba($color-elements-alt, 0.06), 0em 0em $px*6 adjust-color($color-elements-special, $lightness: -5%, $alpha: -0.3)
+        outline: none
+
+textarea
+    resize: vertical
+
+input[type="search"]
+    +appearance(none)
+
+input[type="checkbox"], input[type="radio"]
+    display: inline
+    margin-right: $margin-base
+    vertical-align: $px
+
+input[type="file"]
+    padding-bottom: $padding-medium
+    width: 100%
+
+select
+    max-width: 100%
+    width: auto
+
+
+// buttons --------------------------------------------------------------------
+#{$all-button-inputs}, button
+    +appearance(none)
+    background: rgba($color-elements-special, 0.6)
+    color: lighten($color-bg, 15%)
+    border-radius: $border-radius
+    border: $border-size
+    border-color: $color-fg
+    cursor: pointer
+    display: inline-block
+    font-size: $font-size-large
+    font-weight: bold
+    text-decoration: none
+    vertical-align: middle
+    white-space: nowrap
+    line-height: 1
+    padding: $padding-base $padding-medium
+    +user-select(none)
+    +transition-on(background)
+
+    &:hover, &:focus
+        background: $color-elements-special
+        color: lighten($color-bg, 15%)
+
+    &:disabled
+        cursor: not-allowed
+        opacity: 0.5
+
+
+// browser disclaimer ---------------------------------------------------------
 .browserupgrade
     position: fixed
     width: 100%
     top: 0em
-    color: $color-white-bright
-    background: $color-red
+    color: $color-bg
+    background: $color-elements-special
     z-index: 2
-    +link-color($color-yellow, $color-green-bright)
+    +link-color($color-yellow, $color-green)

@@ -83,7 +83,7 @@ HTML and <abbr title="cascading stylesheets">CSS</abbr> are our tools. Mauris a 
 | cell4   | cell5   | cell6   |
 |=====
 | Foot1   | Foot2   | Foot3   |
-{: .table-verticle}
+{: .table-vertical}
 
 # Code Snippets
 

@@ -7,7 +7,7 @@
 
 
 .nav-list
-    padding: $padding-base 0em
+    // padding: $padding-base 0em
     top: 0em
     z-index: 1
     position: absolute
@@ -17,7 +17,8 @@
         padding: 0em
         width: 100%
         .nav-item
-            +link-color($color-black-bright)
+            font-size: $font-size-large
+            +link-color
 
 
 .animation-wrapper
@@ -51,12 +52,12 @@
         &:checked
             ~ .animation-wrapper
                 top: $total-nav-items*1.5em + $padding-base*2.5
-                +transition-on($property: top, $func: $ease-in-out-expo)
+                +transition-on(top, $time-duration-long, $ease-in-out-expo)
 
         &:not(:checked)
             ~ .animation-wrapper
                 top: $padding-base*2.5
-                +transition-on($property: top, $func: $ease-in-out-expo)
+                // +transition-on($property: top, $func: $ease-in-out-expo)
 
 
 +min-screen($display-threshold+1)
