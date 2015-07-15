@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Syntax Color Test Page
+title: Code Highligting Test Page
 ---
 
-```js
+{% highlight js linenos %}
 /**
 sample javascript from xui
 */
@@ -24,11 +24,12 @@ var undefined,
 window.x$ = window.xui = xui = function(q, context) {
     return new xui.fn.find(q, context);
 };
-```
+
+{% endhighlight %}
 
 ---
 
-```html
+{% highlight html linenos %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head>
 <title>A Tiny Page</title>
@@ -49,11 +50,11 @@ window.x$ = window.xui = xui = function(q, context) {
 <h2>def</h2>
 <p>Testing page</p>
 </body></html>
-```
+{% endhighlight %}
 
 ---
 
-```ruby
+{% highlight ruby linenos %}
 desc "Edit a post (defaults to most recent)"
 task :edit_post, :title do |t, args|
   args.with_defaults(:title => false)
@@ -66,11 +67,11 @@ task :edit_post, :title do |t, args|
     puts "No posts were found with \"#{args.title}\" in the title."
   end
 end
-```
+{% endhighlight %}
 
 ---
 
-```php
+{% highlight php linenos %}
 <?php
 require_once($GLOBALS['g_campsiteDir']. "/$ADMIN_DIR/country/common.php");
 require_once($GLOBALS['g_campsiteDir']. "/classes/SimplePager.php");
@@ -100,11 +101,11 @@ echo camp_html_breadcrumbs($crumbs);
         <td><a href="add.php"><?php putGS("Add new"); ?></a></td>
     </tr>
 </table>
-```
+{% endhighlight %}
 
 ---
 
-```objc
+{% highlight objc linenos %}
 #import "Cocoa1AppDelegate.h"
 
 @implementation Cocoa1AppDelegate
@@ -126,11 +127,11 @@ echo camp_html_breadcrumbs($crumbs);
 }
 
 @end
-```
+{% endhighlight %}
 
 ---
 
-```haskell
+{% highlight haskell linenos %}
 {-# LANGUAGE OverloadedStrings #-}
 module Main where
 
@@ -171,11 +172,11 @@ main = hakyll $ do
 sass :: Compiler Resource String
 sass = getResourceString >>> unixFilter "sass" ["-s", "--scss"]
                          >>> arr compressCss
-```
+{% endhighlight %}
 
 ---
 
-```bash
+{% highlight bash linenos %}
 #!/bin/bash
 
 cd $ROOT_DIR
@@ -202,11 +203,11 @@ case "$PLATFORM" in
                     "Previous settings recorded in ~/tmp/crontab-conflict-arch."
         fi
     ;;
-```
+{% endhighlight %}
 
 ---
 
-```python
+{% highlight python linenos %}
 # test python (sample from offlineimap)
 
 class ExitNotifyThread(Thread):
@@ -274,11 +275,11 @@ class ExitNotifyThread(Thread):
         a call to setExitMessage(), or None if there was no such message
         set."""
         return self.exitmessage
-```
+{% endhighlight %}
 
 ---
 
-```perl
+{% highlight perl linenos %}
 #!perl -w
 
 # Time-stamp: <2002/04/06, 13:12:13 (EST), maverick, csvformat.pl>
@@ -312,11 +313,11 @@ while(<F>)
   print "\n";
 }
 close F;
-```
+{% endhighlight %}
 
 ---
 
-```java
+{% highlight java linenos %}
 import java.util.Map;
 import java.util.TreeSet;
 
@@ -333,11 +334,11 @@ public class GetEnv {
       System.out.printf("%s = %s\n", k, env.get(k));
     }
   }    }
-```
+{% endhighlight %}
 
 ---
 
-```c
+{% highlight c linenos %}
 #define UNICODE
 #include <windows.h>
 
@@ -364,4 +365,4 @@ int main(int argc, char **argv) {
   printf("New speed:     %2d\n", speed);
   return 0;
 }
-```
+{% endhighlight %}

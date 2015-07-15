@@ -1,3 +1,32 @@
+=small-screens
+    +max-screen($display-threshold*0.8)
+        @content
+
+
+=medium-screens
+    +screen($display-threshold*0.8+0.001, $display-threshold)
+        @content
+
+
+=large-screens
+    +min-screen($display-threshold+0.001)
+        @content
+
+
+=smaller-screens
+    +small-screens
+        @content
+    +medium-screens
+        @content
+
+
+=larger-screens
+    +medium-screens
+        @content
+    +large-screens
+        @content
+
+
 =line-under($color: $color-elements-alt)
     &:after
         content: " "
@@ -13,8 +42,11 @@
         content: " "
         position: absolute
         top: $element-dimension/2
-        width: $line-dimension
         border-bottom: $border-size solid $color
+        +larger-screens
+            width: $line-dimension
+        +small-screens
+            width: modular-scale(-3, $line-dimension)
 
     &:before
         right: 100%
@@ -56,14 +88,17 @@
     +border-left-radius($radius)
 
 
-=code-box
-    background: $color-black
-    color: $color-white
-    padding: $padding-medium
-    margin: $margin-medium
-    font-family: $font-stack-code
-    font-size: $font-size-code
+=code-box($alt-style: false)
+    @if $alt-style
+        background: $color-bg-alt
+        color: $color-fg-special
+    @else
+        background: $color-black
+        color: $color-white
     border-width: $border-size
     border-style: solid
     border-color: $color-elements-alt
+    padding: $padding-medium
+    margin: 0em 0em $margin-medium
+    overflow-x: auto
     +border-radius

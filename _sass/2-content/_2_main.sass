@@ -10,14 +10,15 @@
     text-align: justify
     width: 100%
 
-    // viewport << display-threshold ------------------------------------------
-    +max-screen($display-threshold*0.6)
+    +small-screens
+        text-align: left
         +outer-container(90%)
 
-    // viewport < display-threshold -------------------------------------------
-    +screen($display-threshold*0.6+1, $display-threshold)
+        // +landscape
+        //     font-size: modular-scale(-1)
+
+    +medium-screens
         +outer-container(75%)
 
-    // viewport < display-threshold -------------------------------------------
-    +min-screen($display-threshold+1)
+    +large-screens
         +outer-container(60%)

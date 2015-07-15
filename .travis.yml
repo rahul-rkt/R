@@ -8,9 +8,9 @@ before_install:
 
 script: ./toolbelt/travisBuild.sh
 
-branches:
-  only:
-  - gh-pages
+# branches:
+#   only:
+#   - gh-pages
 
 env:
   global:

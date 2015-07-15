@@ -17,8 +17,8 @@ $color-red:               #BF616A
 $color-red-bright:        #F99157
 
 $color-green:             #7FBF7F
-//#A3BE8C
-$color-green-bright:      #99CC99
+//#99CC99
+$color-green-bright:      #A3CE8C
 
 $color-blue:              #8FA1B3
 $color-blue-bright:       #6699CC
@@ -35,7 +35,9 @@ $color-cyan-bright:       #6DDCE4
 // mains
 $color-fg:                $color-black
 $color-fg-alt:            $color-black-bright
+$color-fg-special:        shade($color-magenta, 30%)
 $color-bg:                $color-white-bright
+$color-bg-alt:            darken($color-white-bright, 5%)
 $color-elements:          $color-blue
 $color-elements-alt:      $color-white
 $color-elements-special:  $color-red
@@ -47,17 +49,16 @@ $color-link:              $color-red
 // base dimensions
 $em-base:                 1em
 $px:                      rem($em-base/16)
+$px-relative:             em($em-base/16)
 $modular-scale-ratio:     $major-third
 $modular-scale-ratio-alt: $major-sixth
 
 // typography
 $font-stack-base:         "Lato", "Gibson", $helvetica
 $font-size-base:          $em-base
-$font-size-small:         modular-scale(-1)
-$font-size-large:         modular-scale(1)
 $line-height-base:        strip-units($em-base)*1.5
 
-$font-stack-code:         "Andale Mono", Menlo, $monospace
+$font-stack-code:         Menlo, Monaco, Consolas, $monospace
 $font-size-code:          $font-size-base*0.878
 $line-height-code:        $line-height-base*0.8
 
@@ -83,7 +84,9 @@ $timing-func:             $ease-out-quint
 $timing-func-alt:         $ease-in-out-expo
 
 // media-query
-$display-threshold:       $px*800
+$display-threshold:       800*$px
+$display-threshold-small: 640*$px
+
 
 // assets
 $logo-dimension:          modular-scale(5)
@@ -92,45 +95,6 @@ $rss-src:                 "/assets/img/rss.png"
 
 // nav items
 $total-nav-items:         4
-
-
-// set vendor variables -------------------------------------------------------
-// // Typography
-// $base-font-family:       $font-stack-base
-// $heading-font-family:    $font-stack-base
-//
-// // Font Sizes
-// $base-font-size:         $font-size-base
-//
-// // Line height
-// $base-line-height:       $line-height-base
-// $heading-line-height:    $line-height-base
-//
-// // Other Sizes
-// $base-border-radius:     $em-base/4
-// $base-spacing:           $line-height-base*1em
-// $small-spacing:          $base-spacing/2
-// $base-z-index:           0
-//
-// // Colors
-// $blue:                   #477DCA
-// $dark-gray:              $color-black-bright
-// $medium-gray:            $color-blue
-// $light-gray:             $color-white
-//
-// // Font Colors
-// $base-background-color:  $color-white-bright
-// $base-font-color:        $color-black
-// $action-color:           $blue
-//
-// // Border
-// $base-border-color:      $light-gray
-// $base-border:            0.01em solid $base-border-color
-//
-// // Forms
-// $form-box-shadow:        inset 0 0.1em 0.2em rgba($color-black-bright, 0.06)
-// $form-box-shadow-focus:  $form-box-shadow, 0 0 0.4em adjust-color($action-color, $lightness: -5%, $alpha: -0.3)
-//
 
 
 // R --------------------------------------------------------------------------

@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Style Test Page MARKDOWN
+title: Style Test Page 1
 maths: true
 ---
 
 
-Below is just about everything you'll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
+Below are examples of how elements are styled in this theme.
 
 # Heading 1
 
@@ -48,15 +48,19 @@ HTML and <abbr title="cascading stylesheets">CSS</abbr> are our tools. Mauris a 
 * Item two
 * Item three
 
+### Definition Lists
+
+umami
+: a category of taste in food (besides sweet, sour, salt, and bitter), corresponding to the flavour of glutamates, especially monosodium glutamate.
+
 # Tables
 
 | Header1 | Header2 | Header3 |
 |:--------|:-------:|--------:|
 | cell1   | cell2   | cell3   |
 | cell4   | cell5   | cell6   |
-|----
-| cell1   | cell2   | cell3   |
-| cell4   | cell5   | cell6   |
+| cell7   | cell8   | cell9   |
+| cell10  | cell11  | cell12  |
 |=====
 | Foot1   | Foot2   | Foot3   |
 
@@ -66,9 +70,8 @@ HTML and <abbr title="cascading stylesheets">CSS</abbr> are our tools. Mauris a 
 |:--------|:-------:|--------:|
 | cell1   | cell2   | cell3   |
 | cell4   | cell5   | cell6   |
-|----
-| cell1   | cell2   | cell3   |
-| cell4   | cell5   | cell6   |
+| cell7   | cell8   | cell9   |
+| cell10  | cell11  | cell12  |
 |=====
 | Foot1   | Foot2   | Foot3   |
 {: .table-horizontal}
@@ -78,14 +81,15 @@ HTML and <abbr title="cascading stylesheets">CSS</abbr> are our tools. Mauris a 
 |:--------|:-------:|--------:|
 | cell1   | cell2   | cell3   |
 | cell4   | cell5   | cell6   |
-|----
-| cell1   | cell2   | cell3   |
-| cell4   | cell5   | cell6   |
+| cell7   | cell8   | cell9   |
+| cell10  | cell11  | cell12  |
 |=====
 | Foot1   | Foot2   | Foot3   |
 {: .table-vertical}
 
 # Code Snippets
+
+### MathJax
 
 This >> $$ 1 + 1 = 2 $$ >> is an inline-mathjax code
 
@@ -97,8 +101,17 @@ $$ e = mc^2 $$
 
 ^That was not!
 
+### Code Snippets
+
 This >> `code span test` >> is an inline-code with one tick
 
+###### Triple Ticks/Tildes with language >> via CodeRay
+
+~~~ ruby
+def what?
+  42
+end
+~~~
 
 ```css
 #container {
@@ -108,6 +121,8 @@ This >> `code span test` >> is an inline-code with one tick
 }
 ```
 
+###### Liquid Highlight Tag with language >> via Pygments
+
 {% highlight css %}
 #container {
   float: left;
@@ -115,6 +130,8 @@ This >> `code span test` >> is an inline-code with one tick
   width: 100%;
 }
 {% endhighlight %}
+
+###### Liquid Highlight Tag with language & linenos >> via Pygments
 
 {% highlight css linenos %}
 #container {
@@ -125,7 +142,8 @@ This >> `code span test` >> is an inline-code with one tick
 {% endhighlight %}
 
 
-
-### Gist
+###### Liquid Gist Embed Tags
 
 {% gist 8387126 %}
+
+**NOTE:** _CodeRay & Gists have default code highlighting scheme. But, Pygments is modelled after what I personally use._

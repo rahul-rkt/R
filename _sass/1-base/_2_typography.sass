@@ -1,0 +1,60 @@
+// headers --------------------------------------------------------------------
+h1, h2, h3, h4, h5, h6
+    color: $color-fg-alt
+    margin: 0em 0em $margin-base*2
+
+h1
+    +line-under
+    +larger-screens
+        font-size: modular-scale(6)
+    +small-screens
+        font-size: modular-scale(6, $ratio: $major-second)
+
+h2
+    +larger-screens
+        font-size: modular-scale(5)
+    +small-screens
+        font-size: modular-scale(5, $ratio: $major-second)
+
+h3
+    +larger-screens
+        font-size: modular-scale(4)
+    +small-screens
+        font-size: modular-scale(4, $ratio: $major-second)
+
+h4
+    +larger-screens
+        font-size: modular-scale(3)
+    +small-screens
+        font-size: modular-scale(3, $ratio: $major-second)
+
+h5
+    +larger-screens
+        font-size: modular-scale(2)
+    +small-screens
+        font-size: modular-scale(2, $ratio: $major-second)
+
+h6
+    font-style: italic
+    +larger-screens
+        font-size: modular-scale(1)
+    +small-screens
+        font-size: modular-scale(1, $ratio: $major-second)
+
+
+// paragraphs -----------------------------------------------------------------
+p
+    margin: 0em 0em $margin-medium
+
+
+// links ----------------------------------------------------------------------
+a
+    color: $color-link
+    text-decoration: none
+    +transition-on(color)
+
+    &:active, &:focus, &:hover
+        color: darken($color-link, 15%)
+
+    &:active, &:focus
+        outline: none

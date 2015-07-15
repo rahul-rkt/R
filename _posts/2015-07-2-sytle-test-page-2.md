@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Style Test Page HTML
+title: Style Test Page 2
 ---
 
 
@@ -36,6 +36,8 @@ Okay, at least that's out of the way!
 
 Definition List Title
 : Wow, what a definition!
+: Wow, what a definition!
+: Wow, what a definition!
 
 
 <h3>Ordered List</h3>
@@ -62,7 +64,6 @@ Definition List Title
 <li>List Item 2</li>
 <li>List Item 3</li>
 </ul>
-
 
 <h1>Form Elements</h1>
 
