@@ -34,7 +34,7 @@ author:
 
 # Navigation
 nav:
-  work:                 /projects
+  work:                 https://github.com/rahul-rkt # /projects
   about:                /about
   blog:                 /archive
   rss:                  /feed.xml
