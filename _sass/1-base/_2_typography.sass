@@ -2,42 +2,55 @@
 h1, h2, h3, h4, h5, h6
     color: $color-fg-alt
     margin: 0em 0em $margin-base*2
+    text-align: left
 
 h1
     +line-under
-    +larger-screens
+    +large-screens
         font-size: modular-scale(6)
+    +medium-screens
+        font-size: modular-scale(6, $ratio: $minor-third)
     +small-screens
         font-size: modular-scale(6, $ratio: $major-second)
 
 h2
-    +larger-screens
+    +large-screens
         font-size: modular-scale(5)
+    +medium-screens
+        font-size: modular-scale(5, $ratio: $minor-third)
     +small-screens
         font-size: modular-scale(5, $ratio: $major-second)
 
 h3
-    +larger-screens
+    +large-screens
         font-size: modular-scale(4)
+    +medium-screens
+        font-size: modular-scale(4, $ratio: $minor-third)
     +small-screens
         font-size: modular-scale(4, $ratio: $major-second)
 
 h4
-    +larger-screens
+    +large-screens
         font-size: modular-scale(3)
+    +medium-screens
+        font-size: modular-scale(3, $ratio: $minor-third)
     +small-screens
         font-size: modular-scale(3, $ratio: $major-second)
 
 h5
-    +larger-screens
+    +large-screens
         font-size: modular-scale(2)
+    +medium-screens
+        font-size: modular-scale(2, $ratio: $minor-third)
     +small-screens
         font-size: modular-scale(2, $ratio: $major-second)
 
 h6
     font-style: italic
-    +larger-screens
+    +large-screens
         font-size: modular-scale(1)
+    +medium-screens
+        font-size: modular-scale(1, $ratio: $minor-third)
     +small-screens
         font-size: modular-scale(1, $ratio: $major-second)
 
@@ -51,6 +64,7 @@ p
 a
     color: $color-link
     text-decoration: none
+
     +transition-on(color)
 
     &:active, &:focus, &:hover

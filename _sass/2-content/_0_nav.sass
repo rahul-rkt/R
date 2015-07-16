@@ -2,33 +2,33 @@
     display: none
 
 
-.toggle-controller
-    display: none
+.nav
+    .toggle-controller
+        display: none
 
-
-.nav-list
-    // padding: $padding-base 0em
-    top: 0em
-    z-index: 1
-    position: absolute
-    display: block
-    width: 100%
-    .nav-items
-        padding: 0em
+    .nav-list
+        // padding: $padding-medium 0em
+        margin: $margin-medium 0em
+        top: 0em
+        z-index: 1
+        position: absolute
+        display: block
         width: 100%
-        .nav-item
-            +link-color
-            +larger-screens
-                font-size: modular-scale(1)
-            +small-screens
-                font-size: modular-scale(1, $ratio: $major-second)
+
+        .nav-items
+            padding: 0em
+            margin: 0em
+            width: 100%
+            .nav-item
+                margin: 0em $margin-medium
+                +link-color
+                +larger-screens
+                    font-size: modular-scale(1)
+                +small-screens
+                    font-size: modular-scale(1, $ratio: $major-second)
 
 
 .animation-wrapper
-    background: $color-white-bright
-    position: absolute
-    z-index: 2
-    top: $padding-base*2.5
     +animation(drop-nav-bar 0.75s $ease-in-out-expo 1)
 
 +keyframes(drop-nav-bar)

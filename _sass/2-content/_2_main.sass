@@ -1,10 +1,13 @@
 .animation-wrapper
     width: 100%
-    h1, h2, h3, h4, h5, h6
-        text-align: left
+    background: $color-white-bright
+    position: absolute
+    z-index: 2
+    top: $margin-large
+
 
 .content
-    margin: $margin-base 0
+    // margin: $margin-large 0em
     +user-select(text)
     +user-select-color
     text-align: justify
@@ -13,9 +16,6 @@
     +small-screens
         text-align: left
         +outer-container(90%)
-
-        // +landscape
-        //     font-size: modular-scale(-1)
 
     +medium-screens
         +outer-container(75%)

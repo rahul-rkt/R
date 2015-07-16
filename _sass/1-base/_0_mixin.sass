@@ -1,10 +1,10 @@
 =small-screens
-    +max-screen($display-threshold*0.8)
+    +max-screen($display-threshold*0.6)
         @content
 
 
 =medium-screens
-    +screen($display-threshold*0.8+0.001, $display-threshold)
+    +screen($display-threshold*0.6+0.001, $display-threshold)
         @content
 
 
@@ -43,10 +43,12 @@
         position: absolute
         top: $element-dimension/2
         border-bottom: $border-size solid $color
-        +larger-screens
+        +large-screens
             width: $line-dimension
+        +medium-screens
+            width: $line-dimension*0.75
         +small-screens
-            width: modular-scale(-3, $line-dimension)
+            width: $line-dimension*0.5
 
     &:before
         right: 100%
@@ -63,7 +65,7 @@
     +transition-timing-function($timing-func)
 
 
-=user-select-color($fg: $color-yellow, $bg: $color-black-bright)
+=user-select-color($fg: $color-fg, $bg: $color-yellow-bright)
     ::selection
         color: $fg
         background: $bg
