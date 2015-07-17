@@ -1,0 +1,39 @@
+.post
+    .post-date
+        display: block
+        color: $color-elements-alt
+
+    .post-title
+        @extend %title
+
+
+.related
+    margin: $margin-large 0em
+
+    .related-title
+        color: $color-elements
+        margin: 0em
+
+    .related-posts-list
+        margin: 0em
+
+        li
+            h6
+                margin: 0em
+
+            &:before
+                content: none
+
+        small
+            +larger-screens
+                display: inline-block
+                margin: 0em 0em 0em $margin-medium
+
+            +small-screens
+                display: block
+                margin: 0em
+
+    &:before, &:after
+        content: " "
+        display: block
+        border-bottom: $px dashed $color-elements-alt

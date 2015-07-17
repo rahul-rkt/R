@@ -1,24 +1,24 @@
 .footer
     position: relative
     display: block
-
+    margin: $margin-medium 0em
 
     .feed
+        margin-bottom: $margin-medium
+
         .rss
-            +background-image(url(#{$rss}))
+            +background-image(url(#{$rss-src}))
             background-size: contain
             position: absolute
             display: block
             +size($logo-dimension/2)
             +filter(grayscale(100%))
             +transition-on(filter -webkit-filter)
-            +line-around($logo-dimension/4)
+            +line-around($logo-dimension/2)
 
             &:hover
                 +filter(grayscale(0%))
 
-
     .copyright
-        margin-top: $margin-base/2
         color: $color-white
         +link-color

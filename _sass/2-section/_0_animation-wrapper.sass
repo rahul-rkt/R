@@ -1,0 +1,33 @@
+$top-base:    $margin-medium*2 + modular-scale(1)*$line-height-base
+$top-expanded:  $top-base*1.5 + ($total-nav-items - 1)*modular-scale(1, $margin-medium, $major-second) + $total-nav-items*modular-scale(1, $ratio: $major-second)*$line-height-base
+
+.animation-wrapper
+    position: absolute
+    display: block
+    width: 100%
+    z-index: 2
+    background: $color-bg
+    top: $top-base
+
+    +animation(page-slide-animation $time-duration-long $timing-func-alt 1)
+
++keyframes(page-slide-animation)
+    from
+        +transform(translateY(-$top-base))
+    to
+        +transform(translateY(0em))
+
+
+#toggle
+    display: none
+
+    +smaller-screens
+        &:checked
+            ~ .animation-wrapper
+                top: $top-expanded
+                +transition-on(top, $time-duration-long, $timing-func-alt)
+
+        &:not(:checked)
+            ~ .animation-wrapper
+                top: $top-base
+                +transition-on(top, $time-duration-long, $timing-func-alt)

@@ -24,7 +24,7 @@ html(
 
 
         nav.nav
-            label.toggle-controller(for="toggle") ☰
+            label.toggle-controller(for="toggle") &#9776;
 
             div.nav-list
                 ul.nav-items
@@ -54,5 +54,5 @@ html(
                         span.rss
 
                 p.copyright &copy; &nbsp;
-                    !='{{ site.time | date: "%Y" }}'
-                    a(href!="/about") &nbsp; R
+                    !='{{ site.time | date: "%Y &nbsp;" }}'
+                    a(href!="/about") R

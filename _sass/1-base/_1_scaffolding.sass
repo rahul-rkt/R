@@ -33,11 +33,17 @@ body
 
 // hr -------------------------------------------------------------------------
 hr
-    border-bottom: $border-size solid $color-elements-alt
-    border-left: none
-    border-right: none
-    border-top: none
+    border: none
     margin: $margin-medium 0em
+    height: $font-size-base*$line-height-base
+
+    &:before
+        content: "\2731\2731\2731"
+        color: $color-elements
+        text-align: center
+        display: block
+        margin: 0em
+        letter-spacing: $padding-medium
 
 
 // images ---------------------------------------------------------------------

@@ -1,0 +1,56 @@
+.nav
+    .toggle-controller
+        z-index: 1
+
+        +large-screens
+            display: none
+
+        +smaller-screens
+            display: block
+            position: relative
+            color: $color-elements-alt
+            text-align: right
+            margin: modular-scale(-1, $value: $margin-medium)
+            font-size: modular-scale(1)
+            cursor: pointer
+            top: -$border-size*4
+
+    .nav-list
+        margin: $margin-medium 0em
+        top: 0em
+        z-index: 0
+        position: absolute
+        display: block
+        width: 100%
+
+        .nav-items
+            padding: 0em
+            margin: 0em
+            width: 100%
+
+            .nav-item
+                +link-color
+
+                &:before
+                    content: none
+
+                +large-screens
+                    display: inline-block
+                    font-size: modular-scale(1)
+                    margin: 0em $margin-medium
+
+                +smaller-screens
+                    display: block
+                    font-size: modular-scale(1, $ratio: $major-second)
+                    margin: $margin-medium 0em
+                    &:first-child
+                        margin-top: 0em
+                    &:last-child
+                        margin-bottom: 0em
+
+                a
+                    padding: $padding-medium
+
+        +smaller-screens
+            top: $top-base
+            margin: 0em

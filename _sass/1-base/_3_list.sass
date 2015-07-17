@@ -2,17 +2,11 @@
 blockquote
     margin: 0em 0em $margin-medium
 
-    &:before
-        color: $color-elements
-        content: "\2023\2023\2023"
-        font-size: $font-size-base*2
-        line-height: $line-height-base*0.8
-        margin-right: $margin-base
-        vertical-align: -$font-size-base*0.215
-
     p
-        display: inline
         font-style: italic
+        padding-left: $padding-medium*4
+        color: $color-fg-special
+        background: url("/assets/img/blockqoute-bar.png") repeat-y
 
 
 // lists ----------------------------------------------------------------------
@@ -43,10 +37,17 @@ ol
     ol, ul
         margin: $margin-medium/2 0em $margin-medium/2 $margin-medium
 
+
 ul
     li
         font-style: italic
         margin-bottom: $margin-base
+
+        &:before
+            content: "\25CF"
+            font-style: normal
+            margin-right: $margin-base*2
+            color: $color-elements
 
 
 dl
@@ -70,10 +71,10 @@ dl
         font-style: italic
 
         &:before
-            content: "\2023"
+            content: "\2023\2023\2023"
             color: $color-elements
             font-size: $font-size-base*2
             font-style: normal
             line-height: $line-height-base*0.8
             vertical-align: -$font-size-base*0.215
-            margin: 0em $margin-base*2 0em 0em
+            margin-right: $margin-base*2
