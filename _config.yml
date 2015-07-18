@@ -6,45 +6,50 @@
 isLive:                 false # true = live :: false = dev
 version:                1.0.0
 title:                  Rahul Thakur
-tagline:                MusicBuff, Gamer, Coder
 description:            Personal website of Rahul Thakur
-url:                    http://r.192.168.2.5.xip.io
-ip:                     192.168.2.5 # for local dev with live-reload
+url:                    http://r.192.168.2.6.xip.io
+ip:                     192.168.2.6 # for local dev with live-reload
 locale:                 en_IN
 timezone:               Asia/Hong_Kong
+logo:                   /assets/img/logo.png
+disqus_comments:        rahulrkt # leave blank to disable
 
 
 # Author Details
 author:
+  avatar:               /assets/img/me-light.png
   name:                 Rahul Thakur
-  avatar_light:         /assets/img/me-light.png
-  avatar_dark:          /assets/img/me-dark.png
-  logo:                 /assets/img/logo.png
-  website:              http://rahulthakur.me
-  email:                r@rahulthakur.me # mailto:{{ site.author.email }}
-  twitter:              _rahulthakur # https://twitter.com/{{ site.author.twitter }}
-  linkedin:             rahulkthakur # https://www.linkedin.com/in/{{ site.author.linkedin }}
-  github:               rahul-rkt # https://github.com/{{ site.author.github }}
-  bitbucket:            _rahulthakur # https://bitbucket.org/{{ site.author.bitbucket }}
-  stackoverflow:        1127443 # https://stackoverflow.com/users/{{ site.author.stackoverflow }}
-  googleplus:           +RahulThakurRKT # https://plus.google.com/{{ site.author.googleplus }}
+  tagline:              MusicBuff - Gamer - Coder
+  blurb:                I Love DC Comics, MCR, Megadeth, Chocolates, Eggs. I Drink Beer, Whiskey, Black Coffee. I Enjoy Lazy-ing, Eating, Daydreaming.
+
+  # Social Links [ key=font-awesome :: value=href ]
+  social:
+    globe:              http://rahulthakur.me
+    envelope-o:         mailto:r@rahulthakur.me
+    twitter:            http://twitter.com/_rahulthakur
+    linkedin:           http://www.linkedin.com/in/rahulkthakur
+    github-alt:         http://github.com/rahul-rkt
+    bitbucket:          http://bitbucket.org/_rahulthakur
+    stack-overflow:     http://stackoverflow.com/users/1127443
+
   cv:                   /assets/pdf/CV.pages.pdf
-  keywords:             [ rahul thakur, rahulthakur, rahul, thakur, rkt, dd, catastrophe corporation, catastrophe corp, catcorp, cc, developer, programmer, coder, designer, java, android, php, musicbuff, gamer ]
+  keywords:             [ rahul thakur, rahulthakur, rahul, thakur, rkt, dd, catastrophe corporation, catastrophe corp, catcorp, cc, developer, programmer, coder, designer, java, android, php, jekyll, sass, musicbuff, gamer ]
 
 
 # Navigation
 nav:
-  work:                 https://github.com/rahul-rkt # /projects
+  work:                 /work
+  archive:              /archive
   about:                /about
-  blog:                 /archive
-  rss:                  /feed.xml
 
 
-# Analytics and Comments
-google_analytics:       UA-62417983-3
-google_verification:    lH_YbKTfJUHwERczHyXd2AKj_2LlFwiZx6bUCqsrSd8
-bing_verification:      03805AEA078E6A84C402D95910C0D212
-disqus_shortname:       rahulrkt
+# SEO
+seo:
+  twitter:              _rahulthakur
+  google_plus:          +RahulThakurRKT
+  google_analytics:     UA-62417983-3
+  google_verification:  lH_YbKTfJUHwERczHyXd2AKj_2LlFwiZx6bUCqsrSd8
+  bing_verification:    03805AEA078E6A84C402D95910C0D212
 
 
 # Post Directives
@@ -86,9 +91,5 @@ gems:
   - jekyll-sitemap
   - bourbon
   - neat
-
-sass:
-  sass_dir:             _sass
-  style:                compressed
 
 exclude:                [ "tmp", "vendor", "toolbelt", "public", "config.ru", "Gemfile", "Gemfile.lock", "Guardfile", ".travis.yml" ]

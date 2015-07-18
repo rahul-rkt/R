@@ -14,9 +14,10 @@ html(
 
     !="{% include head.html %}"
 
+
     body.body
-        <!--[if lt IE 9]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <!--[if lt IE 10]>
+        <div class="browserupgrade"><h1>Incompatible Browser!</h1><p>You are using an <b>outdated</b> browser. <a href="http://browsehappy.com/">Upgrade your browser</a> to a mordern browser and continue enjoying the web as it should be.</p></div><div class="mask"></div>
         <![endif]-->
 
 
@@ -28,10 +29,10 @@ html(
 
             div.nav-list
                 ul.nav-items
-                    !="{% for map in site.nav %}"
+                    !="{% for item in site.nav %}"
                         li.nav-item
-                            a(href!="{{ map[1] }}")
-                                !="{{ map[0] }}"
+                            a(href!="{{ item[1] }}")
+                                !="{{ item[0] }}"
                     !="{% endfor %}"
 
 
@@ -45,7 +46,6 @@ html(
             main.main
                 div.content
                     !="{{ content }}"
-                    !="{% include scripts.html %}"
 
 
             footer.footer
@@ -56,3 +56,6 @@ html(
                 p.copyright &copy; &nbsp;
                     !='{{ site.time | date: "%Y &nbsp;" }}'
                     a(href!="/about") R
+
+
+        !="{% include scripts.html %}"

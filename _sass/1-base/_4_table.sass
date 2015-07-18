@@ -9,7 +9,7 @@ table
     tr, td, th
         vertical-align: middle
 
-    tr.even
+    tr:nth-child(even)
         background: darken($color-bg, 2%)
 
     th
@@ -32,6 +32,7 @@ table
         color: lighten($color-bg, 15%)
         font-weight: bold
 
+
 .table-horizontal, .table-vertical
     border: $border-size solid $color-elements-alt
     text-align: center
@@ -39,9 +40,11 @@ table
     td
         border-bottom: none
 
+
 .table-horizontal
     th
         border-bottom: $border-size dashed $color-elements-alt
+
 
 .table-vertical
     th

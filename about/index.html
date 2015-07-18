@@ -1,0 +1,25 @@
+---
+layout: page
+fa: true
+---
+
+
+<div class="about">
+
+    <img class="about-avatar" src="{{ site.author.avatar }}" />
+
+    <p class="about-name">{{ site.author.name }}</p>
+
+    <p class="about-tagline">{{ site.author.tagline }}</p>
+
+    <p class="about-blurb">{{ site.author.blurb }}</p>
+
+    <p class="about-social">
+        {% for item in site.author.social %}
+            <a href="{{ item[1] }}"><i class="fa fa-{{ item[0] }}"></i></a>
+        {% endfor %}
+    </p>
+
+    <p class="about-more"><a href="/about/more/">more about me..</a></p>
+
+</div>

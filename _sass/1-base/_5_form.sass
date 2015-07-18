@@ -1,12 +1,14 @@
 // forms ----------------------------------------------------------------------
 fieldset
     background: $color-bg-alt
-    border: $border-size
-    border-radius: $border-radius
     margin: 0em 0em $margin-medium
     outline: none
+    border: $border-size
+    +border-radius
+
     +larger-screens
         padding: $padding-large
+
     +small-screens
         padding: $padding-medium
 
@@ -25,23 +27,23 @@ label
 
 #{$all-text-inputs}, select[multiple=multiple], textarea
     background: lighten($color-bg, 15%)
-    border: $border-size
-    border-radius: $border-radius
-    border-color: $color-elements-alt
-    box-shadow: inset 0em $px $px*3 rgba($color-elements-alt, 0.06)
     margin-bottom: $margin-base
     padding: $padding-base
     width: 100%
+    border: $border-size
+    border-color: $color-elements-alt
+    +border-radius
+    +box-shadow(inset 0em $px $px*3 rgba($color-elements-alt, 0.06))
     +transition-on(box-shadow border-color)
 
     &:hover
         border-color: darken($color-elements-alt, 15%)
-        box-shadow: inset 0em $px $px*3 rgba($color-elements-alt, 0.01), 0em 0em $px*6 adjust-color($color-elements-special, $lightness: -25%, $alpha: -0.7)
+        +box-shadow("inset 0em $px $px*3 rgba($color-elements-alt, 0.01), 0em 0em $px*6 adjust-color($color-elements-special, $lightness: -25%, $alpha: -0.7)")
 
 
     &:focus
         border-color: $color-elements-special
-        box-shadow: inset 0em $px $px*3 rgba($color-elements-alt, 0.06), 0em 0em $px*6 adjust-color($color-elements-special, $lightness: -5%, $alpha: -0.3)
+        +box-shadow("inset 0em $px $px*3 rgba($color-elements-alt, 0.06), 0em 0em $px*6 adjust-color($color-elements-special, $lightness: -5%, $alpha: -0.3)")
         outline: none
 
 textarea
@@ -69,9 +71,6 @@ select
     +appearance(none)
     background: lighten($color-elements-special, 15%)
     color: lighten($color-bg, 15%)
-    border-radius: $border-radius
-    border: $border-size
-    border-color: $color-fg
     cursor: pointer
     display: inline-block
     font-weight: bold
@@ -80,10 +79,15 @@ select
     white-space: nowrap
     line-height: 1
     padding: $padding-base $padding-medium
+    border: $border-size
+    border-color: $color-fg
+    +border-radius
     +user-select(none)
     +transition-on(background)
+
     +larger-screens
         font-size: modular-scale(1)
+
     +small-screens
         font-size: modular-scale(1, $ratio: $major-second)
 

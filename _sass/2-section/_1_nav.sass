@@ -39,6 +39,12 @@
                     font-size: modular-scale(1)
                     margin: 0em $margin-medium
 
+                    &:first-child
+                        margin-left: 0em
+
+                    &:last-child
+                        margin-right: 0em
+
                 +smaller-screens
                     display: block
                     font-size: modular-scale(1, $ratio: $major-second)

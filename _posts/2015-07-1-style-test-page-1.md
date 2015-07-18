@@ -64,6 +64,7 @@ umami
 | cell4   | cell5   | cell6   |
 | cell7   | cell8   | cell9   |
 | cell10  | cell11  | cell12  |
+| cell13  | cell14  | cell15  |
 |=====
 | Foot1   | Foot2   | Foot3   |
 
@@ -75,6 +76,7 @@ umami
 | cell4   | cell5   | cell6   |
 | cell7   | cell8   | cell9   |
 | cell10  | cell11  | cell12  |
+| cell13  | cell14  | cell15  |
 |=====
 | Foot1   | Foot2   | Foot3   |
 {: .table-horizontal}
@@ -86,6 +88,7 @@ umami
 | cell4   | cell5   | cell6   |
 | cell7   | cell8   | cell9   |
 | cell10  | cell11  | cell12  |
+| cell13  | cell14  | cell15  |
 |=====
 | Foot1   | Foot2   | Foot3   |
 {: .table-vertical}

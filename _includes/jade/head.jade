@@ -1,16 +1,21 @@
 head
     //- general ---------------------------------------------------------------
     meta(charset="utf-8")
+
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
+
     meta(name="language", content="English")
+
     meta(
         name="author"
         content!="{{ site.author.name }}"
     )
+
     meta(
         name="description"
         content!="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
     )
+
     meta(
         name="copyright"
         content!="{{ site.author.name }}"
@@ -27,14 +32,20 @@ head
         )
 
         //- google
-        meta(
-            name="google-site-verification"
-            content!="{{ site.google_verification }}"
-        )
-        link(
-            rel="author"
-            href!="https://plus.google.com/{{ site.author.googleplus }}"
-        )
+        !="{% if site.seo.google_verification %}"
+            meta(
+                name="google-site-verification"
+                content!="{{ site.seo.google_verification }}"
+            )
+        !="{% endif %}"
+
+        !="{% if site.seo.google_plus %}"
+            link(
+                rel="author"
+                href!="https://plus.google.com/{{ site.seo.google_plus }}"
+            )
+        !="{% endif %}"
+
         meta(
             itemprop="name"
             content!="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"
@@ -52,27 +63,29 @@ head
         meta(name="googlebot", content="noodp")
 
         //- twitter cards
-        meta(name="twitter:card", content="summary")
-        meta(
-            name="twitter:title"
-            content!="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"
-        )
-        meta(
-            name="twitter:description"
-            content!="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
-        )
-        meta(
-            name="twitter:creator"
-            content!="@{{ site.author.twitter }}"
-        )
-        meta(
-            name="twitter:url"
-            content!="{{ site.url }}{{ page.url }}"
-        )
-        meta(
-            name="twitter:image"
-            content!="{{ site.logo }}"
-        )
+        !="{% if site.seo.twitter %}"
+            meta(name="twitter:card", content="summary")
+            meta(
+                name="twitter:title"
+                content!="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"
+            )
+            meta(
+                name="twitter:description"
+                content!="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"
+            )
+            meta(
+                name="twitter:creator"
+                content!="@{{ site.seo.twitter }}"
+            )
+            meta(
+                name="twitter:url"
+                content!="{{ site.url }}{{ page.url }}"
+            )
+            meta(
+                name="twitter:image"
+                content!="{{ site.logo }}"
+            )
+        !="{% endif %}"
 
         //- open graph
         meta(property="og:locale", content="en_IN")
@@ -103,10 +116,12 @@ head
         )
 
         //- bing
-        meta(
-            name="msvalidate.01"
-            content!="{{ site.bing_verification }}"
-        )
+        !="{% if site.seo.bing_verification %}"
+            meta(
+                name="msvalidate.01"
+                content!="{{ site.seo.bing_verification }}"
+            )
+        !="{% endif %}"
     !="{% endif %}"
 
 
@@ -125,7 +140,7 @@ head
     !="{% if page.fa %}"
         link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
     !="{% endif %}"
-    //- inline all scss
+    //- inline all sass
     style(type="text/css")
         !="{% capture include_to_scssify %}{% include style.scss %}{% endcapture %}{{ include_to_scssify | scssify }}"
 

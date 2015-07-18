@@ -1,0 +1,15 @@
+.archive
+    .archive-items
+        .archive-item
+            font-style: normal
+            font-size: modular-scale(1, $ratio: $major-second)
+            color: $color-elements-alt
+
+            &:before
+                content: none
+
+            .archive-item-date
+                &:after
+                    content: "\226B"
+                    margin: 0em $margin-medium 0em $margin-base
+                    vertical-align: $px

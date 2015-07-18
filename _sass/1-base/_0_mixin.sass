@@ -90,6 +90,15 @@
     +border-left-radius($radius)
 
 
+=box-shadow($shadow)
+    @if type-of($shadow) == string
+        $shadow: unquote($shadow)
+
+    -webkit-box-shadow: $shadow
+    -moz-box-shadow: $shadow
+    box-shadow: $shadow
+
+
 =code-box($alt-style: false)
     @if $alt-style
         background: $color-bg-alt

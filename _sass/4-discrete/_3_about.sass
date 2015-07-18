@@ -1,0 +1,73 @@
+.about
+    margin: $margin-large auto
+    padding: 5%
+    background: $color-black-bright
+    +border-radius
+    +box-shadow(inset 0rem 0rem 1rem 0rem darken($color-black-bright, 5%))
+
+    +larger-screens
+        width: 75%
+
+    +small-screens
+        width: 90%
+
+    img.about-avatar
+        border-radius: 50%
+        max-width: modular-scale(10)
+        margin: $margin-medium auto
+
+    .about-name
+        margin: $margin-medium 0em 0em 0em
+        color: $color-yellow-bright
+        text-align: center
+
+        +large-screens
+            font-size: modular-scale(5)
+
+        +medium-screens
+            font-size: modular-scale(4)
+
+        +small-screens
+            font-size: modular-scale(3)
+
+    .about-tagline
+        margin: 0em 0em $margin-medium 0em
+        color: $color-blue-bright
+        text-align: center
+
+        +large-screens
+            font-size: modular-scale(2)
+
+        +medium-screens
+            font-size: modular-scale(1)
+
+        +small-screens
+            font-size: modular-scale(0)
+
+    .about-blurb
+        color: $color-white-bright
+
+    .about-social
+        text-align: center
+        +link-color($color-black, $color-white)
+
+        i
+            padding: $padding-medium
+
+            +large-screens
+                font-size: modular-scale(2)
+
+            +medium-screens
+                font-size: modular-scale(1)
+
+            +small-screens
+                font-size: modular-scale(0)
+
+    .about-more
+        margin: $margin-medium 0em 0em 0em
+        padding: $padding-medium 0em 0em 0em
+        text-align: right
+        +link-color($active: lighten($color-white, 10%))
+
+        a
+            font-style: italic
