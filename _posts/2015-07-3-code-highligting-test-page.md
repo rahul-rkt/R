@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Code Highligting Test Page
+title: Code Highligting
 ---
 
 

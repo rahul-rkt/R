@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Style Test Page MD
+title: Markdown Test
 maths: true
 ---
 

@@ -7,8 +7,8 @@ isLive:                 false # true = live :: false = dev
 version:                1.0.0
 title:                  Rahul Thakur
 description:            Personal website of Rahul Thakur
-url:                    http://r.147.8.91.43.xip.io
-ip:                     147.8.91.43 # for local dev with live-reload
+url:                    http://r.147.8.90.249.xip.io
+ip:                     147.8.90.249 # for local dev with live-reload
 locale:                 en_IN
 timezone:               Asia/Hong_Kong
 logo:                   /assets/img/logo.png
