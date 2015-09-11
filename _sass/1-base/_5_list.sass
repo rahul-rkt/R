@@ -1,10 +1,10 @@
 // blockqoutes ----------------------------------------------------------------
 blockquote
-    margin: 0em 0em $margin-medium
+    +scale-margin(0, 0, m)
 
     p
         font-style: italic
-        padding-left: $padding-medium*4
+        padding-left: $padding-base*8
         color: $color-fg-special
         background: url("/assets/img/blockqoute-bar.png") repeat-y
 
@@ -12,8 +12,8 @@ blockquote
 // lists ----------------------------------------------------------------------
 ol, ul
     list-style-type: none
-    margin: 0em 0em $margin-medium 0em
     padding: 0em
+    +scale-margin(0, 0, m, 0)
 
 ol
     counter-reset: li
@@ -35,7 +35,7 @@ ol
             +border-radius
 
     ol, ul
-        margin: $margin-medium/2 0em $margin-medium/2 $margin-medium
+        +scale-margin(b, 0, b, m)
 
 
 ul
@@ -51,17 +51,14 @@ ul
 
 
 dl
-    margin: 0em 0em $margin-medium
+    +scale-margin(0, 0, m)
 
     dt
         font-weight: bold
         text-transform: lowercase
         color: $color-fg-alt
         margin: 0em
-        +larger-screens
-            font-size: modular-scale(1)
-        +small-screens
-            font-size: modular-scale(1, $ratio: $major-second)
+        +scale-text(1)
 
         &:after
             content: ":"
@@ -71,10 +68,5 @@ dl
         font-style: italic
 
         &:before
-            content: "\2023\2023\2023"
-            color: $color-elements
-            font-size: $font-size-base*2
-            font-style: normal
-            line-height: $line-height-base*0.8
-            vertical-align: -$font-size-base*0.215
-            margin-right: $margin-base*2
+            content: " "
+            margin-right: 2rem

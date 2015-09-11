@@ -8,11 +8,11 @@ version:                1.0.0
 title:                  Rahul Thakur
 description:            Personal website of Rahul Thakur
 url:                    http://rahulthakur.me
-ip:                     192.168.2.6 # for local dev with live-reload
+ip:                     147.8.91.43 # for local dev with live-reload
 locale:                 en_IN
 timezone:               Asia/Hong_Kong
 logo:                   /assets/img/logo.png
-disqus_comments:        rahulrkt # leave blank to disable
+disqus_comments:        rahult # leave blank to disable
 
 
 # Author Details
@@ -24,7 +24,6 @@ author:
 
   # Social Links [ key=font-awesome :: value=href ]
   social:
-    globe:              http://rahulthakur.me
     envelope-o:         mailto:r@rahulthakur.me
     twitter:            http://twitter.com/_rahulthakur
     linkedin:           http://www.linkedin.com/in/rahulkthakur
@@ -56,7 +55,7 @@ seo:
 future:                 true
 permalink:              /:categories/:title/
 relative_permalinks:    true
-paginate:               1
+paginate:               3
 
 
 # Dependencies
@@ -86,7 +85,6 @@ kramdown:
 # Build Directives
 safe:                   true
 lsi:                    false
-excerpt_separator:      ""
 gems:
   - jekyll-sitemap
   - bourbon

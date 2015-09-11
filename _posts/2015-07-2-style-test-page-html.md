@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Style Test Page 2
+title: Style Test Page HTML
 ---
 
 

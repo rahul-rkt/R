@@ -17,7 +17,7 @@ html(
 
     body.body
         <!--[if lt IE 10]>
-        <div class="browserupgrade"><h1>Incompatible Browser!</h1><p>You are using an <b>outdated</b> browser. <a href="http://browsehappy.com/">Upgrade your browser</a> to a mordern browser and continue enjoying the web as it should be.</p></div><div class="mask"></div>
+        <div class="browserupgrade"><h1>Incompatible Browser!</h1><p>You are using an <b>outdated</b> browser.<br/> <a href="http://browsehappy.com/">Click here</a> to upgrade to a mordern browser and continue enjoying the web.</p></div><div class="mask"></div>
         <![endif]-->
 
 
@@ -46,6 +46,7 @@ html(
             main.main
                 div.content
                     !="{{ content }}"
+                    !="{% include scripts.html %}"
 
 
             footer.footer
@@ -56,6 +57,3 @@ html(
                 p.copyright &copy; &nbsp;
                     !='{{ site.time | date: "%Y &nbsp;" }}'
                     a(href!="/about") R
-
-
-        !="{% include scripts.html %}"

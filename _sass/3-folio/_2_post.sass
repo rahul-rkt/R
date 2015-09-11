@@ -2,38 +2,29 @@
     .post-date
         display: block
         color: $color-elements-alt
+        padding-left: $padding-base*2
 
     .post-title
-        @extend %title
+        @extend %title-style
 
 
-.related
-    margin: $margin-large 0em
-
-    .related-title
-        color: $color-elements
-        margin: 0em
-
-    .related-posts-list
-        margin: 0em
-
-        li
-            h6
-                margin: 0em
-
-            &:before
-                content: none
-
-        small
-            +larger-screens
-                display: inline-block
-                margin: 0em 0em 0em $margin-medium
-
-            +small-screens
-                display: block
-                margin: 0em
+.related-posts
+    +scale-margin(l, 0)
 
     &:before, &:after
         content: " "
         display: block
         border-bottom: $px dashed $color-elements-alt
+
+    .related-posts-title
+        color: $color-elements
+        margin: 0em
+
+    .related-posts-items
+        margin: 0em
+
+        .related-posts-item
+            @extend %sub-item-style
+
+            .related-posts-item-date
+                @extend %date-style

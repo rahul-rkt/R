@@ -1,6 +1,6 @@
 // mathjax --------------------------------------------------------------------
 .MathJax_Display
-    margin: 0em 0em $margin-medium !important
+    margin: 0em 0em $margin-base*3 !important
 
 .math
     color: $color-fg-special !important
@@ -21,7 +21,7 @@ p
         +code-box(true)
         font-family: $font-stack-code
         font-size: $font-size-code
-        padding: $padding-base $padding-base*2
+        padding: $padding-base $padding-base*2 !important
         vertical-align: $px-relative
         margin: 0em $margin-base
 
@@ -127,7 +127,7 @@ p
 
 // gist -----------------------------------------------------------------------
 .gist
-    margin: 0em 0em $margin-medium
+    margin: 0em 0em $margin-base*3
 
     .lines, .highlight
         table-layout: auto !important

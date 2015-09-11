@@ -1,15 +1,44 @@
 .archive
     .archive-items
         .archive-item
+            display: flex
             font-style: normal
-            font-size: modular-scale(1, $ratio: $major-second)
-            color: $color-elements-alt
 
             &:before
                 content: none
 
             .archive-item-date
-                &:after
-                    content: "\226B"
-                    margin: 0em $margin-medium 0em $margin-base
-                    vertical-align: $px
+                color: $color-elements-alt
+                @extend %date-style
+
+            .archive-item-content
+
+                .archive-item-content-link
+                    .archive-item-content-link-title
+                        +scale-text(2)
+
+                    .archive-item-content-link-excerpt
+                        font-style: italic
+                        color: $color-fg-alt
+
+            +larger-screens
+                flex:
+                    direction: row
+
+                .archive-item-date
+                    width: 33.334%
+
+                .archive-item-content
+                    width: 66.666%
+
+            +smaller-screens
+                flex:
+                    direction: column
+
+            +large-screens
+                .archive-item-date
+                    padding-top: $padding-base*2
+
+            +regular-screens
+                .archive-item-date
+                    padding-top: $padding-base*1.5

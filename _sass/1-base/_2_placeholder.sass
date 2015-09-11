@@ -1,0 +1,34 @@
+// helpers --------------------------------------------------------------------
+%vertical-rythm
+    background-image: url("http://basehold.it/i/16")
+
+
+// styles ---------------------------------------------------------------------
+%title-style
+    width: 100%
+    margin-top: -$margin-base
+    color: $color-fg-special
+    +scale-text(7)
+
+    &:after
+        content: none
+
+
+%sub-item-style
+    font-style: normal
+    color: $color-elements-alt
+    +scale-text(1)
+
+    +smaller-screens
+        span
+            display: block
+
+    &:before
+        content: none
+
+
+%date-style
+    &:after
+        content: "\226B"
+        vertical-align: $px
+        +scale-margin(0, m, 0, b)

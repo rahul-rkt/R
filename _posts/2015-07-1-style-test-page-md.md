@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Style Test Page 1
+title: Style Test Page MD
 maths: true
 ---
 
@@ -146,10 +146,3 @@ end
   width: 100%;
 }
 {% endhighlight %}
-
-
-###### Liquid Gist Embed Tags
-
-{% gist 8387126 %}
-
-**NOTE:** _CodeRay & Gists have default code highlighting scheme. But, Pygments is modelled after what I personally use._

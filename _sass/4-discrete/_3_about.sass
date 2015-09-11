@@ -1,72 +1,73 @@
 .about
-    margin: $margin-large auto
-    padding: 5%
     background: $color-black-bright
+    +scale-margin(l, auto)
+    +scale-padding(m)
     +border-radius
     +box-shadow(inset 0rem 0rem 1rem 0rem darken($color-black-bright, 5%))
 
     +larger-screens
-        width: 75%
+        width: 85%
 
-    +small-screens
-        width: 90%
+    +smaller-screens
+        width: 100%
 
     img.about-avatar
         border-radius: 50%
         max-width: modular-scale(10)
-        margin: $margin-medium auto
+        +scale-margin(m, auto)
 
     .about-name
-        margin: $margin-medium 0em 0em 0em
         color: $color-yellow-bright
         text-align: center
-
-        +large-screens
-            font-size: modular-scale(5)
-
-        +medium-screens
-            font-size: modular-scale(4)
-
-        +small-screens
-            font-size: modular-scale(3)
+        +scale-text(5)
+        +scale-margin(m, 0, 0)
 
     .about-tagline
-        margin: 0em 0em $margin-medium 0em
         color: $color-blue-bright
         text-align: center
-
-        +large-screens
-            font-size: modular-scale(2)
-
-        +medium-screens
-            font-size: modular-scale(1)
-
-        +small-screens
-            font-size: modular-scale(0)
+        +scale-text(2)
+        +scale-margin(0, 0, m)
 
     .about-blurb
         color: $color-white-bright
+        text-align: center
 
     .about-social
-        text-align: center
-        +link-color($color-black, $color-white)
+        clear: both
+        float: left
+        position: relative
+        width: 60%
+        margin: 0em 20%
 
-        i
-            padding: $padding-medium
+        .about-social-grid
+            float: left
+            display: inline-block
+            position: relative
+            width: 33.334%
 
-            +large-screens
-                font-size: modular-scale(2)
+            .about-social-link
+                display: block
+                position: relative
+                margin: 0em
+                padding: 35% 0%
+                color: $color-black
+                text-align: center
+                vertical-align: middle
+                +border-radius
+                +transition-on(margin)
 
-            +medium-screens
-                font-size: modular-scale(1)
-
-            +small-screens
-                font-size: modular-scale(0)
+                &:hover, &:active, &:focus
+                    background: $color-black
+                    color: $color-white
+                    margin-top: $margin-base
+                    margin-bottom: -$margin-base
+                    +transition-on(margin)
 
     .about-more
-        margin: $margin-medium 0em 0em 0em
-        padding: $padding-medium 0em 0em 0em
+        clear: both
         text-align: right
+        margin: 0em $margin-base*2 0em 0em
+        +scale-padding(l, 0, 0)
         +link-color($active: lighten($color-white, 10%))
 
         a

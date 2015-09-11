@@ -1,12 +1,13 @@
 .header
     position: relative
     display: block
-    margin: 0em 0em $margin-medium
+    text-align: center
 
     .branding
         .logo
             +background-image(url(#{$logo-src}))
             background-size: contain
+            background-repeat: no-repeat
             position: absolute
             display: block
             +size($logo-dimension)

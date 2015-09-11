@@ -1,27 +1,28 @@
 .nav
-    .toggle-controller
-        z-index: 1
+    text-align: center
 
-        +large-screens
+    .toggle-controller
+
+        +larger-screens
             display: none
 
         +smaller-screens
             display: block
             position: relative
-            color: $color-elements-alt
+            margin: rem($nav-margin)
             text-align: right
-            margin: modular-scale(-1, $value: $margin-medium)
-            font-size: modular-scale(1)
+            color: $color-elements-alt
+            font-size: $nav-font-size
             cursor: pointer
-            top: -$border-size*4
+            z-index: 1
 
     .nav-list
-        margin: $margin-medium 0em
-        top: 0em
-        z-index: 0
-        position: absolute
         display: block
+        position: absolute
+        top: $top-border
+        margin: $nav-margin 0em
         width: 100%
+        z-index: 0
 
         .nav-items
             padding: 0em
@@ -29,15 +30,15 @@
             width: 100%
 
             .nav-item
+                font-size: $nav-font-size
                 +link-color
 
                 &:before
                     content: none
 
-                +large-screens
+                +larger-screens
                     display: inline-block
-                    font-size: modular-scale(1)
-                    margin: 0em $margin-medium
+                    margin: 0em $nav-item-margin
 
                     &:first-child
                         margin-left: 0em
@@ -47,15 +48,17 @@
 
                 +smaller-screens
                     display: block
-                    font-size: modular-scale(1, $ratio: $major-second)
-                    margin: $margin-medium 0em
+                    margin: $nav-item-margin 0em
+
+
                     &:first-child
                         margin-top: 0em
+
                     &:last-child
                         margin-bottom: 0em
 
                 a
-                    padding: $padding-medium
+                    padding: $nav-item-margin
 
         +smaller-screens
             top: $top-base

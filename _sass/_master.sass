@@ -36,7 +36,7 @@ $color-fg:                $color-black
 $color-fg-alt:            $color-black-bright
 $color-fg-special:        shade($color-magenta, 30%)
 $color-bg:                $color-white-bright
-$color-bg-alt:            darken($color-white-bright, 5%)
+$color-bg-alt:            darken($color-white-bright, 2.5%)
 $color-elements:          $color-blue
 $color-elements-alt:      $color-white
 $color-elements-special:  $color-red
@@ -44,36 +44,48 @@ $color-link:              $color-red
 
 
 // style directives -----------------------------------------------------------
-// base dimensions
+// cardinals
 $em-base:                 1em
 $px:                      rem($em-base/16)
 $px-relative:             em($em-base/16)
+
+$modular-scale-ratio-l:   $perfect-fourth
 $modular-scale-ratio:     $major-third
-$modular-scale-ratio-alt: $major-sixth
+$modular-scale-ratio-m:   $minor-third
+$modular-scale-ratio-s:   $major-second
+
+$modular-space-ratio-l:   $major-seventh
+$modular-space-ratio:     $minor-seventh
+$modular-space-ratio-m:   $major-sixth
+$modular-space-ratio-s:   $golden
 
 // typography
-$font-stack-base:         "Lato", "Gibson", $helvetica
-$font-size-base:          $em-base
-$line-height-base:        strip-units($em-base)*1.5
+@import url(http://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Playfair+Display:700|Roboto+Mono:400,400italic,700,700italic)
 
-$font-stack-code:         Menlo, Monaco, Consolas, $monospace
-$font-size-code:          $font-size-base*0.878
+$font-size-base:          $em-base
+$font-stack-base:         "Lato", $helvetica
+$line-height-base:        strip-units($em-base)*1.6
+
+$font-stack-title:        "Playfair Display", $font-stack-base
+$line-height-title:       strip-units($em-base)*1.2
+
+$font-stack-code:         "Roboto Mono", Menlo, Monaco, Consolas, $monospace
+$font-size-code:          $font-size-base*0.875
 $line-height-code:        $line-height-base*0.8
 
 // paddings
 $padding-base:            $em-base/4
-$padding-medium:          modular-scale(2, $padding-base, $modular-scale-ratio-alt)
-$padding-large:           modular-scale(4, $padding-base, $modular-scale-ratio-alt)
+$padding-factor-medium:   2
+$padding-factor-large:    4
 
 // margins
 $margin-base:             $em-base/4
-$margin-medium:           modular-scale(3, $margin-base, $modular-scale-ratio-alt)
-$margin-large:            modular-scale(5, $margin-base, $modular-scale-ratio-alt)
+$margin-factor-medium:    3
+$margin-factor-large:     5
 
-// borders & lines
+// borders
 $border-size:             $px
 $border-radius:           $em-base/4
-$line-dimension:          modular-scale(10)
 
 // time
 $time-duration-short:     0.25s
@@ -81,16 +93,17 @@ $time-duration-long:      0.75s
 $timing-func:             $ease-out-quint
 $timing-func-alt:         $ease-in-out-expo
 
-// media-query
-$display-threshold:       800*$px
+// media-query thresholds
+$screen-size-regular:     1040*$px
+$screen-size-small:       720*$px
+$screen-size-mobile:      480*$px
 
-// assets
+// etc
+$line-dimension:          modular-scale(10)
 $logo-dimension:          modular-scale(5)
+$total-nav-items:         3
 $logo-src:                "/assets/img/logo.png"
 $rss-src:                 "/assets/img/rss.png"
-
-// nav items
-$total-nav-items:         3
 
 
 // R --------------------------------------------------------------------------

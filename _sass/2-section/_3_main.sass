@@ -1,25 +1,19 @@
 .main
-    +large-screens
-        margin: $margin-large 0em
-
-    +medium-screens
-        margin: modular-scale(-2, $margin-large) 0em
-
-    +small-screens
-        margin: modular-scale(-4, $margin-large) 0em
+    +scale-margin(l, 0)
 
     .content
         +user-select(text)
         +user-select-color
-        text-align: justify
         width: 100%
-
-        +small-screens
-            text-align: left
-            +outer-container(90%)
-
-        +medium-screens
-            +outer-container(75%)
 
         +large-screens
             +outer-container(60%)
+
+        +regular-screens
+            +outer-container(70%)
+
+        +medium-screens
+            +outer-container(80%)
+
+        +small-screens
+            +outer-container(90%)

@@ -1,5 +1,11 @@
-$top-base:    $margin-medium*2 + modular-scale(1)*$line-height-base
-$top-expanded:  $top-base*1.5 + ($total-nav-items - 1)*modular-scale(1, $margin-medium, $major-second) + $total-nav-items*modular-scale(1, $ratio: $major-second)*$line-height-base
+$top-border:         em($border-size*4)
+$nav-margin:         $margin-base*5
+$nav-font-size:      $font-size-base*1.25
+$nav-item-margin:    $margin-base*3
+
+$top-base:           $top-border + $nav-font-size*$line-height-base + $nav-margin*2
+$top-expanded:       $top-base*1.5 + $nav-item-margin*($total-nav-items - 1) + $total-nav-items*$nav-font-size*$line-height-base
+
 
 .animation-wrapper
     position: absolute

@@ -14,12 +14,16 @@ fa: true
 
     <p class="about-blurb">{{ site.author.blurb }}</p>
 
-    <p class="about-social">
+    <div class="about-social">
         {% for item in site.author.social %}
-            <a href="{{ item[1] }}"><i class="fa fa-{{ item[0] }}"></i></a>
+            <div class="about-social-grid">
+                <a class="about-social-link" href="{{ item[1] }}">
+                    <i id="about-social-icon" class="fa fa-{{ item[0] }} fa-fw"></i>
+                </a>
+            </div>
         {% endfor %}
-    </p>
+    </div>
 
-    <p class="about-more"><a href="/about/more/">more about me..</a></p>
+    <p class="about-more"><a href="/about/more">more about me..</a></p>
 
 </div>

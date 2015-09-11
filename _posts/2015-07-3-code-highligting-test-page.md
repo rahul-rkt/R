@@ -3,6 +3,10 @@ layout: post
 title: Code Highligting Test Page
 ---
 
+
+This is a sample page for testing code highlighting. Examples include some of the most popular programming languages supported by pygments.
+
+
 {% highlight js linenos %}
 /**
 sample javascript from xui

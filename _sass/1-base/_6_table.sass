@@ -1,7 +1,7 @@
 // tables ---------------------------------------------------------------------
 table
     border-collapse: collapse
-    margin: 0em 0em $margin-medium
+    +scale-margin(0, 0, m)
     table-layout: fixed
     width: 100%
     text-align: left
@@ -10,20 +10,17 @@ table
         vertical-align: middle
 
     tr:nth-child(even)
-        background: darken($color-bg, 2%)
+        background: $color-bg-alt
 
     th
         font-weight: bold
         color: $color-fg-alt
-        padding: rem($padding-medium)
+        padding: rem($padding-base*3)
         border-bottom: $border-size solid $color-elements-alt
-        +larger-screens
-            font-size: modular-scale(1)
-        +small-screens
-            font-size: modular-scale(1, $ratio: $major-second)
+        +scale-text(1)
 
     td
-        padding: rem($padding-medium)
+        padding: rem($padding-base*3)
         border-bottom: $border-size solid $color-elements-alt
         left: -$font-size-base/4
 

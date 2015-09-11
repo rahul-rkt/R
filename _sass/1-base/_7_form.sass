@@ -1,16 +1,11 @@
 // forms ----------------------------------------------------------------------
 fieldset
     background: $color-bg-alt
-    margin: 0em 0em $margin-medium
+    +scale-margin(0, 0, m)
+    +scale-padding(l)
     outline: none
     border: $border-size
     +border-radius
-
-    +larger-screens
-        padding: $padding-large
-
-    +small-screens
-        padding: $padding-medium
 
 input, label, select
     display: block
@@ -38,12 +33,12 @@ label
 
     &:hover
         border-color: darken($color-elements-alt, 15%)
-        +box-shadow("inset 0em $px $px*3 rgba($color-elements-alt, 0.01), 0em 0em $px*6 adjust-color($color-elements-special, $lightness: -25%, $alpha: -0.7)")
+        +box-shadow("inset 0em #{$px} #{$px*3} #{rgba($color-elements-alt, 0.01)}, 0em 0em #{$px*6} #{adjust-color($color-elements-special, $lightness: -25%, $alpha: -0.7)}")
 
 
     &:focus
         border-color: $color-elements-special
-        +box-shadow("inset 0em $px $px*3 rgba($color-elements-alt, 0.06), 0em 0em $px*6 adjust-color($color-elements-special, $lightness: -5%, $alpha: -0.3)")
+        +box-shadow("inset 0em #{$px} #{$px*3} #{rgba($color-elements-alt, 0.06)}, 0em 0em #{$px*6} #{adjust-color($color-elements-special, $lightness: -5%, $alpha: -0.3)}")
         outline: none
 
 textarea
@@ -58,7 +53,7 @@ input[type="checkbox"], input[type="radio"]
     vertical-align: $px-relative
 
 input[type="file"]
-    padding-bottom: $padding-medium
+    +scale-padding(0, 0, m, 0)
     width: 100%
 
 select
@@ -78,18 +73,13 @@ select
     vertical-align: middle
     white-space: nowrap
     line-height: 1
-    padding: $padding-base $padding-medium
     border: $border-size
     border-color: $color-fg
+    +scale-text(1)
+    +scale-padding(b, m)
     +border-radius
     +user-select(none)
     +transition-on(background)
-
-    +larger-screens
-        font-size: modular-scale(1)
-
-    +small-screens
-        font-size: modular-scale(1, $ratio: $major-second)
 
     &:hover, &:focus
         background: $color-elements-special
